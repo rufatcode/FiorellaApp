@@ -1,0 +1,46 @@
+﻿<Properties StartupConfiguration="{93D03148-B11C-40C6-8D8D-78DB715165B7}|Default">
+  <MonoDevelop.Ide.ItemProperties.FrontoBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <AuthorInfo Name="rufat" Email="rufatri@code.edu.az" Copyright="" Company="" Trademark="" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="FrontoBack/Views/Home/Index.cshtml">
+    <Files>
+      <File FileName="FrontoBack/Controllers/HomeController.cs" Line="31" Column="58" />
+      <File FileName="FrontoBack/Views/Home/Index.cshtml" Line="215" Column="21" />
+      <File FileName="FrontoBack/ViewModel/HomeVM.cs" Line="21" Column="29" />
+      <File FileName="FrontoBack/Properties/launchSettings.json" Line="14" Column="47" />
+      <File FileName="FrontoBack/Models/Catagories.cs" Line="11" Column="25" />
+      <File FileName="FrontoBack/Models/Products.cs" Line="15" Column="23" />
+      <File FileName="FrontoBack/DAL/AppDbContext.cs" Line="11" Column="47" />
+      <File FileName="FrontoBack/Models/FlowerExpert.cs" Line="12" Column="39" />
+      <File FileName="FrontoBack/Models/Blog.cs" Line="22" Column="1" />
+      <File FileName="FrontoBack/Program.cs" Line="28" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FrontoBack" expanded="True">
+            <Node name="FrontoBack" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="DAL" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="ViewModel" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
