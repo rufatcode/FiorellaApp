@@ -12,6 +12,7 @@ namespace FrontoBack.DAL
 		public DbSet<Catagorie> Catagories { get; set; }
 		public DbSet<FlowerExpert> FlowerExperts { get; set; }
 		public DbSet<Blog> Blogs { get; set; }
+		public DbSet<Accordion> Accordions { get; set; }
 		public AppDbContext(DbContextOptions options):base(options)
 		{
 		}

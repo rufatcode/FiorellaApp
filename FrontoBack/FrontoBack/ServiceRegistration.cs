@@ -9,7 +9,11 @@ namespace FrontoBack
 		public static void Registration(this IServiceCollection services,IConfiguration configuration)
 		{
 			services.AddControllersWithViews();
-			services.AddDbContext<AppDbContext>(option =>
+//.AddNewtonsoftJson(options =>
+//options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+//);
+
+            services.AddDbContext<AppDbContext>(option =>
 			{
 				option.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
 				//service.UseSqlServer(configuration["ConnectionString:DefaultConnection"]);

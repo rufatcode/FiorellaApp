@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<section id="accordion-title">
+    <div class="container py-4">
+        <div class="row py-5">
+            <div class="col-12">
+                <h1>Accordions</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="accordion">
+    <div class="container">
+        <div class="row accordion">
+            @await Component.InvokeAsync("Accordion",new  {take=3 })
+            @await Component.InvokeAsync("Accordion", new{ take=3,skip=3})
+
+
+        </div>
+        <div class="row accordion-color">
+            @await Component.InvokeAsync("Accordion", new {take=3})
+            @await Component.InvokeAsync("Accordion", new { take = 3, skip = 3 })
+
+        </div>
+    </div>
+</section>
+
+<script>
+    
+</script>
