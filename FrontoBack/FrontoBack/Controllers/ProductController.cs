@@ -37,6 +37,28 @@ namespace FrontoBack.Controllers
                 .ToList();
             return PartialView("_ProductPartial",products);
         }
+        public IActionResult Product(int? id)
+        {
+            if (id==null)
+            {
+                return NotFound();
+            }
+            Product product = _context.Products
+                .FirstOrDefault(x => x.Id == id);
+            if (product==null)
+            {
+                return NotFound();
+            }
+            return View(id);
+        }
+        public IActionResult Search(string value)
+        {
+            List<Product> products = _context.Products
+                .Where(p => p.Name.Contains(value))
+                .ToList();
+                
+            return PartialView("_ProductSearchPartial",products);
+        }
         public IActionResult Test()
         {
             List<Product> products = _context.Products

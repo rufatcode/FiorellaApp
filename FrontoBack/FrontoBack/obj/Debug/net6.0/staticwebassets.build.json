@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0oYc2BXnIqkFDLmg1HV4zMyIiqE70zxHu3OVKF5VuoI=",
+  "Hash": "CeSujsxV5yR69pNQSeQXln1EAalNvbvLp6/FXkqX3mw=",
   "Source": "FrontoBack",
   "BasePath": "_content/FrontoBack",
   "Mode": "Default",
@@ -831,6 +831,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/testimonial-img-2.png"
+    },
+    {
+      "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/js/base.js",
+      "SourceId": "FrontoBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/",
+      "BasePath": "_content/FrontoBack",
+      "RelativePath": "js/base.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/base.js"
     },
     {
       "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/js/script.js",

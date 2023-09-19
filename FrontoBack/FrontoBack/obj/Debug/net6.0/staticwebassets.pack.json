@@ -189,6 +189,10 @@
       "PackagePath": "staticwebassets/img/testimonial-img-2.png"
     },
     {
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/js/base.js",
+      "PackagePath": "staticwebassets/js/base.js"
+    },
+    {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/js/script.js",
       "PackagePath": "staticwebassets/js/script.js"
     },

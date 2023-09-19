@@ -36,9 +36,9 @@
                         <div class="collapse navbar-collapse d-none d-lg-block" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-controller="/Home" >Home</a>
+                                    <a class="nav-link" asp-controller="/Home">Home</a>
                                     <ul class="list-unstyled py-3">
-                                        <li class=""><a class="px-1" href="~/">Home 1</a></li>
+                                        <li class=""><a class="px-1" asp-controller="product" asp-action="index">Product</a></li>
                                         <li class=""><a class="px-1" href="~/">Home 2</a></li>
                                         <li class=""><a class="px-1" href="~/">Home 3</a></li>
                                     </ul>
@@ -153,6 +153,7 @@
                                             <input id="input-search" type="text" placeholder="Search">
                                             <i class="fas fa-search my-auto" id="search"></i>
                                         </li>
+
 
                                     </ul>
                                 </li>
@@ -396,8 +397,10 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/e5e249fce2.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js" integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="~/owlcarousel/owl.carousel.min.js"></script>
     <script src="~/js/script.js"></script>
+    <script src="~/js/base.js"></script>
 </body>
 
 </html>
