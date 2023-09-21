@@ -20,6 +20,8 @@
     <None Remove="Views\Shared\Components\Accordion\" />
     <None Remove="Views\Product\" />
     <None Remove="Views\Shared\Components\Product\" />
+    <None Remove="Views\Shared\Components\Header\" />
+    <None Remove="Views\Shared\Components\Footer\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -36,6 +38,8 @@
     <Folder Include="Views\Shared\Components\Accordion\" />
     <Folder Include="Views\Product\" />
     <Folder Include="Views\Shared\Components\Product\" />
+    <Folder Include="Views\Shared\Components\Header\" />
+    <Folder Include="Views\Shared\Components\Footer\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />

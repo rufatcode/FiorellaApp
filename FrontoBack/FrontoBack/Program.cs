@@ -8,7 +8,7 @@ builder.Services.Registration(config);
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
-
+app.UseSession();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

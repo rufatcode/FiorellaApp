@@ -18,6 +18,10 @@ namespace FrontoBack
 				option.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
 				//service.UseSqlServer(configuration["ConnectionString:DefaultConnection"]);
 			});
+			services.AddSession(option =>
+			{
+				option.IdleTimeout = TimeSpan.FromMinutes(10);
+			});
 		}
 	}
 }

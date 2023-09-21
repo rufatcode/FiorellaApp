@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using FrontoBack.DAL;
 using FrontoBack.Models;
+using FrontoBack.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -58,6 +60,115 @@ namespace FrontoBack.Controllers
                 .ToList();
                 
             return PartialView("_ProductSearchPartial",products);
+        }
+        public IActionResult Basket(int ? id)
+        {
+            //Response.Cookies.Append("Test","Hello",new CookieOptions { MaxAge=TimeSpan.FromMinutes(20)});
+            //HttpContext.Session.SetString("Test1", "Hi");
+            //HttpContext.Session.Remove("Test1");
+            Product existProduct = _context.Products.FirstOrDefault(p => p.Id == id);
+            if (id==null||existProduct==null)
+            {
+                return RedirectToAction("Index");
+            }
+            List<ProductToBasket> products = new();
+            string data = Request.Cookies["Basket"];
+            if (data==null)
+            {
+                Response.Cookies.Append("Basket",JsonConvert.SerializeObject(products),new CookieOptions { MaxAge=TimeSpan.FromDays(1)});
+            }
+            else
+            {
+                products = JsonConvert.DeserializeObject<List<ProductToBasket>>(data);
+            }
+            if (products.Find(p=>p.Id==existProduct.Id)!=null)
+            {
+                products.Find(p => p.Id == existProduct.Id).ProductCount++;
+            }
+            else
+            {
+                products.Add(new() { Id = existProduct.Id, ProductCount = 1 });
+            }
+            
+            Response.Cookies.Append("Basket", JsonConvert.SerializeObject(products));
+            return RedirectToAction("ShowBasket");
+        }
+        public IActionResult ShowBasket()
+        {
+            List<BasketVM> basketVM = new();
+            List<ProductToBasket> productToBaskets = new();
+            string data = Request.Cookies["Basket"];
+            if (data==null||data=="[]")
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                productToBaskets = JsonConvert.DeserializeObject<List<ProductToBasket>>(data);
+            }
+            foreach (var item in productToBaskets)
+            {
+                Product exisctProduct = _context.Products.FirstOrDefault(p => p.Id == item.Id);
+                basketVM.Add(new() {Id=exisctProduct.Id,Name=exisctProduct.Name,ImgSrc=exisctProduct.ImgSrc,Price=exisctProduct.Price,ProductCount=item.ProductCount });
+            }
+            return View(basketVM);
+        }
+        public IActionResult RemoveProduct(int ?  id)
+        {
+            Product existProduct = _context.Products.FirstOrDefault(p => p.Id == id);
+            if (existProduct==null||id==null)
+            {
+                return Redirect("/Product/Index");
+            }
+            string data = Request.Cookies["Basket"];
+            if (data==null)
+            {
+                return Redirect("/Product/Index");
+            }
+            List<ProductToBasket> products = JsonConvert.DeserializeObject<List<ProductToBasket>>(data);
+            products.Remove(products.Find(p => p.Id == id));
+            Response.Cookies.Append("Basket", JsonConvert.SerializeObject(products), new CookieOptions { MaxAge = TimeSpan.FromDays(1) });
+            return Redirect("/Product/ShowBasket");
+        }
+        public IActionResult IncreaseProduct(int ? id)
+        {
+            Product existProduct = _context.Products.FirstOrDefault(p => p.Id == id);
+            if (existProduct == null||id==null)
+            {
+                return RedirectToAction("Index");
+            }
+            string data = Request.Cookies["Basket"];
+            if (data==null)
+            {
+                return RedirectToAction("Index");
+            }
+            List<ProductToBasket> productToBaskets = JsonConvert.DeserializeObject<List<ProductToBasket>>(data);
+            productToBaskets.Find(p => p.Id == id).ProductCount++;
+            Response.Cookies.Append("Basket", JsonConvert.SerializeObject(productToBaskets),new CookieOptions { MaxAge=TimeSpan.FromDays(1)});
+
+            return RedirectToAction("ShowBasket");
+        }
+        public IActionResult DecreaseProduct(int ? id)
+        {
+            Product existProduct = _context.Products.FirstOrDefault(p => p.Id == id);
+            if (existProduct == null || id == null)
+            {
+                return RedirectToAction("Index");
+            }
+            string data = Request.Cookies["Basket"];
+            if (data == null)
+            {
+                return RedirectToAction("Index");
+            }
+            List<ProductToBasket> productToBaskets = JsonConvert.DeserializeObject<List<ProductToBasket>>(data);
+            if (productToBaskets.Find(p=>p.Id==id).ProductCount==1)
+            {
+                return Redirect($"/Product/RemoveProduct/{id}");
+            }
+            productToBaskets.Find(p => p.Id == id).ProductCount--;
+            Response.Cookies.Append("Basket", JsonConvert.SerializeObject(productToBaskets), new CookieOptions { MaxAge = TimeSpan.FromDays(1) });
+
+            return RedirectToAction("ShowBasket");
         }
         public IActionResult Test()
         {
