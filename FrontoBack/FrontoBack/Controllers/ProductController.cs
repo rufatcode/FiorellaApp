@@ -71,26 +71,7 @@ namespace FrontoBack.Controllers
             {
                 return RedirectToAction("Index");
             }
-            List<ProductToBasket> products = new();
-            string data = Request.Cookies["Basket"];
-            if (data==null)
-            {
-                Response.Cookies.Append("Basket",JsonConvert.SerializeObject(products),new CookieOptions { MaxAge=TimeSpan.FromDays(1)});
-            }
-            else
-            {
-                products = JsonConvert.DeserializeObject<List<ProductToBasket>>(data);
-            }
-            if (products.Find(p=>p.Id==existProduct.Id)!=null)
-            {
-                products.Find(p => p.Id == existProduct.Id).ProductCount++;
-            }
-            else
-            {
-                products.Add(new() { Id = existProduct.Id, ProductCount = 1 });
-            }
             
-            Response.Cookies.Append("Basket", JsonConvert.SerializeObject(products));
             return RedirectToAction("ShowBasket");
         }
         public IActionResult ShowBasket()

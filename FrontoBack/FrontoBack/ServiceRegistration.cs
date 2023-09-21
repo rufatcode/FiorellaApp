@@ -1,5 +1,7 @@
 ﻿using System;
 using FrontoBack.DAL;
+using FrontoBack.Services;
+using FrontoBack.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace FrontoBack
@@ -22,6 +24,10 @@ namespace FrontoBack
 			{
 				option.IdleTimeout = TimeSpan.FromMinutes(10);
 			});
+			services.AddHttpContextAccessor();
+			services.AddScoped<IAddProductService, AddProductService>();
+			//services.AddSingleton<IAddProductService, AddProductService>();
+			//services.AddTransient<IAddProductService, AddProductService>();
 		}
 	}
 }

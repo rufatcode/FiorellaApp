@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations.Schema;
+using FrontoBack.DAL;
 
 namespace FrontoBack.Models
 {
@@ -14,9 +15,7 @@ namespace FrontoBack.Models
         public DateTime Date { get; set; }
 		public string Title { get; set; }
 		public string Content { get; set; }
-		public Blog()
-		{
-		}
+		
 	}
 }
 
