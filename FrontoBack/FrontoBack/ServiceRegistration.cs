@@ -28,6 +28,10 @@ namespace FrontoBack
 			services.AddScoped<IAddProductService, AddProductService>();
 			//services.AddSingleton<IAddProductService, AddProductService>();
 			//services.AddTransient<IAddProductService, AddProductService>();
+			services.AddScoped<IShowBasketService, ShowBasketService>();
+			services.AddScoped<IRemoveProductService, RemoveProductService>();
+			services.AddScoped<IIncreaseProductService, IncreaseProductService>();
+			services.AddScoped<IDecreaseProductService, DecreaseProductService>();
 		}
 	}
 }

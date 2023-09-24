@@ -146,9 +146,18 @@
                                 <a asp-controller="Product" asp-action="ShowBasket"><i class="fas fa-shopping-bag"></i></a>
                                 <sup class="rounded-circle">@ViewBag.ProductCount</sup>
                                 <span>CART ($@ViewBag.TotalPrice)</span>
-                                <ul class="list-unstyled py-3">
-                                    <li class="">No products in the cart.</li>
-                                </ul>
+                                @if (ViewBag.ProductCount == 0)
+                                {
+                                    <ul class="list-unstyled py-3">
+                                        <li class="">No products in the cart.</li>
+                                    </ul>
+                                }
+                                @if (ViewBag.ProductCount > 0)
+                                {
+                                    <ul class="list-unstyled py-3">
+                                        <li class="">@ViewBag.ProductCount products in the cart.</li>
+                                    </ul>
+                                }
                             </li>
                         </ul>
                     </div>

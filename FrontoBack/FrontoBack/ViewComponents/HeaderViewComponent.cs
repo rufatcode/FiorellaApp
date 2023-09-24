@@ -16,10 +16,20 @@ namespace FrontoBack.ViewComponents
 		public async Task<IViewComponentResult> InvokeAsync()
 		{
 			Dictionary<string, string> data = _context.NavBars.ToDictionary(p => p.Key, p => p.Value);
-			List<ProductToBasket> productToBaskets = JsonConvert.DeserializeObject<List<ProductToBasket>>(Request.Cookies["Basket"]);
-			List<Product> products = _context.Products.ToList();
-            ViewBag.ProductCount = productToBaskets.Sum(p=>p.ProductCount);
-			ViewBag.TotalPrice = productToBaskets.Sum(pb => pb.ProductCount *products.Find(p=>p.Id==pb.Id).Price);
+			string basket= Request.Cookies["Basket"];
+			if (basket==null)
+			{
+				ViewBag.ProductCount = 0;
+				ViewBag.TotalPrice = 0;
+            }
+			else
+			{
+                List<ProductToBasket> productToBaskets = JsonConvert.DeserializeObject<List<ProductToBasket>>(basket);
+                List<Product> products = _context.Products.ToList();
+                ViewBag.ProductCount = productToBaskets.Sum(p => p.ProductCount);
+                ViewBag.TotalPrice = productToBaskets.Sum(pb => pb.ProductCount * products.Find(p => p.Id == pb.Id).Price);
+            }
+           
             return View(await Task.FromResult(data));
 		}
 	}

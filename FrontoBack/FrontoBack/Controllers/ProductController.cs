@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using FrontoBack.DAL;
 using FrontoBack.Models;
+using FrontoBack.Services.Interfaces;
 using FrontoBack.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -16,9 +17,19 @@ namespace FrontoBack.Controllers
     public class ProductController : Controller
     {
         private readonly AppDbContext _context;
-        public ProductController(AppDbContext context)
+        private readonly IAddProductService _addProduct;
+        private readonly IShowBasketService _showBasketService;
+        private readonly IRemoveProductService _removeProductService;
+        private readonly IIncreaseProductService _increaseProductService;
+        private readonly IDecreaseProductService _decreaseProductService;
+        public ProductController(AppDbContext context, IAddProductService addProductService,IShowBasketService showBasketService, IRemoveProductService removeProductService, IIncreaseProductService increaseProductService, IDecreaseProductService decreaseProductService)
         {
             _context = context;
+            _addProduct = addProductService;
+            _showBasketService = showBasketService;
+            _removeProductService = removeProductService;
+            _increaseProductService = increaseProductService;
+            _decreaseProductService = decreaseProductService;
         }
         public IActionResult Index()
         {
@@ -61,43 +72,33 @@ namespace FrontoBack.Controllers
                 
             return PartialView("_ProductSearchPartial",products);
         }
-        public IActionResult Basket(int ? id)
+        public IActionResult Basket(int  id)
         {
             //Response.Cookies.Append("Test","Hello",new CookieOptions { MaxAge=TimeSpan.FromMinutes(20)});
             //HttpContext.Session.SetString("Test1", "Hi");
             //HttpContext.Session.Remove("Test1");
             Product existProduct = _context.Products.FirstOrDefault(p => p.Id == id);
-            if (id==null||existProduct==null)
+            if (id==0||existProduct==null)
             {
                 return RedirectToAction("Index");
             }
-            
+            _addProduct.Add(id);
             return RedirectToAction("ShowBasket");
         }
         public IActionResult ShowBasket()
         {
-            List<BasketVM> basketVM = new();
-            List<ProductToBasket> productToBaskets = new();
             string data = Request.Cookies["Basket"];
             if (data==null||data=="[]")
             {
                 return RedirectToAction("Index");
             }
-            else
-            {
-                productToBaskets = JsonConvert.DeserializeObject<List<ProductToBasket>>(data);
-            }
-            foreach (var item in productToBaskets)
-            {
-                Product exisctProduct = _context.Products.FirstOrDefault(p => p.Id == item.Id);
-                basketVM.Add(new() {Id=exisctProduct.Id,Name=exisctProduct.Name,ImgSrc=exisctProduct.ImgSrc,Price=exisctProduct.Price,ProductCount=item.ProductCount });
-            }
-            return View(basketVM);
+            
+            return View(_showBasketService.Show());
         }
-        public IActionResult RemoveProduct(int ?  id)
+        public IActionResult RemoveProduct(int   id)
         {
             Product existProduct = _context.Products.FirstOrDefault(p => p.Id == id);
-            if (existProduct==null||id==null)
+            if (existProduct==null||id==0)
             {
                 return Redirect("/Product/Index");
             }
@@ -106,15 +107,13 @@ namespace FrontoBack.Controllers
             {
                 return Redirect("/Product/Index");
             }
-            List<ProductToBasket> products = JsonConvert.DeserializeObject<List<ProductToBasket>>(data);
-            products.Remove(products.Find(p => p.Id == id));
-            Response.Cookies.Append("Basket", JsonConvert.SerializeObject(products), new CookieOptions { MaxAge = TimeSpan.FromDays(1) });
+            _removeProductService.Remove(id, data);
             return Redirect("/Product/ShowBasket");
         }
-        public IActionResult IncreaseProduct(int ? id)
+        public IActionResult IncreaseProduct(int  id)
         {
             Product existProduct = _context.Products.FirstOrDefault(p => p.Id == id);
-            if (existProduct == null||id==null)
+            if (existProduct == null||id==0)
             {
                 return RedirectToAction("Index");
             }
@@ -123,16 +122,14 @@ namespace FrontoBack.Controllers
             {
                 return RedirectToAction("Index");
             }
-            List<ProductToBasket> productToBaskets = JsonConvert.DeserializeObject<List<ProductToBasket>>(data);
-            productToBaskets.Find(p => p.Id == id).ProductCount++;
-            Response.Cookies.Append("Basket", JsonConvert.SerializeObject(productToBaskets),new CookieOptions { MaxAge=TimeSpan.FromDays(1)});
 
+            _increaseProductService.Increase(id, data);
             return RedirectToAction("ShowBasket");
         }
-        public IActionResult DecreaseProduct(int ? id)
+        public IActionResult DecreaseProduct(int  id)
         {
             Product existProduct = _context.Products.FirstOrDefault(p => p.Id == id);
-            if (existProduct == null || id == null)
+            if (existProduct == null || id == 0)
             {
                 return RedirectToAction("Index");
             }
@@ -141,14 +138,8 @@ namespace FrontoBack.Controllers
             {
                 return RedirectToAction("Index");
             }
-            List<ProductToBasket> productToBaskets = JsonConvert.DeserializeObject<List<ProductToBasket>>(data);
-            if (productToBaskets.Find(p=>p.Id==id).ProductCount==1)
-            {
-                return Redirect($"/Product/RemoveProduct/{id}");
-            }
-            productToBaskets.Find(p => p.Id == id).ProductCount--;
-            Response.Cookies.Append("Basket", JsonConvert.SerializeObject(productToBaskets), new CookieOptions { MaxAge = TimeSpan.FromDays(1) });
 
+            _decreaseProductService.Decrease(id, data);
             return RedirectToAction("ShowBasket");
         }
         public IActionResult Test()
@@ -158,7 +149,6 @@ namespace FrontoBack.Controllers
                 .ToList();
 
             var data = _context.ChangeTracker.Entries().ToList();
-
             List<ProductJson> productJsons = new();
 
             //return Ok(new
