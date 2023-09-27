@@ -32,6 +32,8 @@
     <None Remove="Areas\AdminArea\Views\Dashboard\" />
     <None Remove="Areas\AdminArea\ViewModel\" />
     <None Remove="Areas\AdminArea\Views\Catagory\" />
+    <None Remove="Areas\AdminArea\Views\Slider\" />
+    <None Remove="Areas\AdminArea\Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -61,6 +63,8 @@
     <Folder Include="Areas\AdminArea\Views\Dashboard\" />
     <Folder Include="Areas\AdminArea\ViewModel\" />
     <Folder Include="Areas\AdminArea\Views\Catagory\" />
+    <Folder Include="Areas\AdminArea\Views\Slider\" />
+    <Folder Include="Areas\AdminArea\Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />

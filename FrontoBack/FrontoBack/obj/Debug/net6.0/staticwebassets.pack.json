@@ -525,6 +525,14 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/1d9ae879-3af0-4de7-888a-26590a194f34photo-1508921912186-1d1a45ebb3c1.jpeg",
+      "PackagePath": "staticwebassets/img/1d9ae879-3af0-4de7-888a-26590a194f34photo-1508921912186-1d1a45ebb3c1.jpeg"
+    },
+    {
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/8cf1a943-b5b7-45df-8734-a4822ef8c799download.jpeg",
+      "PackagePath": "staticwebassets/img/8cf1a943-b5b7-45df-8734-a4822ef8c799download.jpeg"
+    },
+    {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/blog-feature-img-1.jpg",
       "PackagePath": "staticwebassets/img/blog-feature-img-1.jpg"
     },

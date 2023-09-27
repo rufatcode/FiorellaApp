@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model List<Slider>
+
+
+<div class="card">
+    <div class="card-body">
+        <a asp-action="Create" class="btn btn-outline-success my-3">Create Slider</a>
+        <h4 class="card-title">Basic Table</h4>
+        <p class="card-description">
+            Slider Table
+        </p>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Settings</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var slider in Model)
+                    {
+                        <tr>
+                            <td>
+                                <img width="200" height="200" src="~/img/@slider.ImgSrc" />
+                            </td>
+                            <td>
+                                <a asp-action="Delete" asp-route-id="@slider.Id"><i class="mdi mdi-delete btn btn-outline-danger "> </i></a>
+                                <a asp-action="Update" asp-route-id="@slider.Id"><i class="mdi mdi-table-edit btn btn-outline-warning"> </i></a>
+                            </td>
+                        </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

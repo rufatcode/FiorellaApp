@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model List<Product>
+
+
+<div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <a asp-action="Create" class="my-3 btn btn-outline-primary">Create Product</a>
+            <h4 class="card-title">Produts Table</h4>
+            <p class="card-description">
+                Add class <code>.table</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Catagory Name</th>
+                            <th>Settings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var product in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <img src="~/img/@product.ImgSrc" />
+                                </td>
+                                <td>@product.Name</td>
+                                <td>@product.Price</td>
+                                <td>@product.Catagories.Name</td>
+                                <td>
+                                    <a asp-action="Delete" asp-route-id="@product.Id"><i class="mdi mdi-delete btn btn-outline-danger "> </i></a>
+                                    <a asp-action="Update" asp-route-id="@product.Id"><i class="mdi mdi-table-edit btn btn-outline-warning"> </i></a>
+                                    <a asp-action="Detail" asp-route-id="@product.Id"> <i class="mdi mdi-account-card-details btn btn-outline-primary"> </i></a>
+                                </td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

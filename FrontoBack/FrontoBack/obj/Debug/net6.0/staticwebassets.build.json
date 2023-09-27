@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "u8VgNrk5PAXCK5mgXKOHXM8FAZOQ3Wy3jf6FE5Ag5y4=",
+  "Hash": "mELOtTY9tx4XPJao91t7iK9r1nWKeHXDNSHlcdEAa8Q=",
   "Source": "FrontoBack",
   "BasePath": "_content/FrontoBack",
   "Mode": "Default",
@@ -2259,6 +2259,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/1d9ae879-3af0-4de7-888a-26590a194f34photo-1508921912186-1d1a45ebb3c1.jpeg",
+      "SourceId": "FrontoBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/",
+      "BasePath": "_content/FrontoBack",
+      "RelativePath": "img/1d9ae879-3af0-4de7-888a-26590a194f34photo-1508921912186-1d1a45ebb3c1.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/1d9ae879-3af0-4de7-888a-26590a194f34photo-1508921912186-1d1a45ebb3c1.jpeg"
+    },
+    {
+      "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/8cf1a943-b5b7-45df-8734-a4822ef8c799download.jpeg",
+      "SourceId": "FrontoBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/",
+      "BasePath": "_content/FrontoBack",
+      "RelativePath": "img/8cf1a943-b5b7-45df-8734-a4822ef8c799download.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/8cf1a943-b5b7-45df-8734-a4822ef8c799download.jpeg"
     },
     {
       "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/blog-feature-img-1.jpg",
