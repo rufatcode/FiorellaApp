@@ -30,18 +30,8 @@
     <None Remove="Areas\AdminArea\Views\" />
     <None Remove="Areas\AdminArea\Views\Shared\" />
     <None Remove="Areas\AdminArea\Views\Dashboard\" />
-    <None Remove="Areas\AdminArea\Views\BasicElements\" />
-    <None Remove="Areas\AdminArea\Views\Cart\" />
-    <None Remove="Areas\AdminArea\Views\Icon\" />
-    <None Remove="Areas\AdminArea\Views\Table\" />
-    <None Remove="Areas\AdminArea\Views\Login\" />
-    <None Remove="Areas\AdminArea\Views\Login2\" />
-    <None Remove="Areas\AdminArea\Views\Register\" />
-    <None Remove="Areas\AdminArea\Views\Register2\" />
-    <None Remove="Areas\AdminArea\Views\LockScreen\" />
-    <None Remove="Areas\AdminArea\Views\Button\" />
-    <None Remove="Areas\AdminArea\Views\Typography\" />
-    <None Remove="Areas\AdminArea\Views\Documentation\" />
+    <None Remove="Areas\AdminArea\ViewModel\" />
+    <None Remove="Areas\AdminArea\Views\Catagory\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -69,18 +59,8 @@
     <Folder Include="Areas\AdminArea\Views\Shared\" />
     <Folder Include="wwwroot\admin\" />
     <Folder Include="Areas\AdminArea\Views\Dashboard\" />
-    <Folder Include="Areas\AdminArea\Views\BasicElements\" />
-    <Folder Include="Areas\AdminArea\Views\Cart\" />
-    <Folder Include="Areas\AdminArea\Views\Icon\" />
-    <Folder Include="Areas\AdminArea\Views\Table\" />
-    <Folder Include="Areas\AdminArea\Views\Login\" />
-    <Folder Include="Areas\AdminArea\Views\Login2\" />
-    <Folder Include="Areas\AdminArea\Views\Register\" />
-    <Folder Include="Areas\AdminArea\Views\Register2\" />
-    <Folder Include="Areas\AdminArea\Views\LockScreen\" />
-    <Folder Include="Areas\AdminArea\Views\Button\" />
-    <Folder Include="Areas\AdminArea\Views\Typography\" />
-    <Folder Include="Areas\AdminArea\Views\Documentation\" />
+    <Folder Include="Areas\AdminArea\ViewModel\" />
+    <Folder Include="Areas\AdminArea\Views\Catagory\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />

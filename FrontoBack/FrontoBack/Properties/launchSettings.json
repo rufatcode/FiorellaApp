@@ -11,7 +11,7 @@
     "FrontoBack": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5132",
+      "applicationUrl": "http://localhost:5135",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

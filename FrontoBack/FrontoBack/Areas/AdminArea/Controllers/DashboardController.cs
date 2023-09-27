@@ -8,10 +8,59 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FrontoBack.Areas.AdminArea.Controllers
 {
+    [Area("AdminArea")]
     public class DashboardController : Controller
     {
-        [Area("AdminArea")]
+       
         public IActionResult Index()
+        {
+            return View();
+        }
+        public IActionResult Icon()
+        {
+            return View();
+        }
+        public IActionResult Button()
+        {
+            return View();
+        }
+        public IActionResult BasicElements()
+        {
+            return View();
+        }
+        public IActionResult Login()
+        {
+            return View();
+        }
+        public IActionResult Login2()
+        {
+            return View();
+        }
+        public IActionResult Table()
+        {
+            return View();
+        }
+        public IActionResult Register()
+        {
+            return View();
+        }
+        public IActionResult Register2()
+        {
+            return View();
+        }
+        public IActionResult Typography()
+        {
+            return View();
+        }
+        public IActionResult LockScreen()
+        {
+            return View();
+        }
+        public IActionResult Cart()
+        {
+            return View();
+        }
+        public IActionResult Documentation()
         {
             return View();
         }

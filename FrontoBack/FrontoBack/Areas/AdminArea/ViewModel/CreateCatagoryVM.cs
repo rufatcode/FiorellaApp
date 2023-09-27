@@ -1,16 +1,15 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace FrontoBack.Models
+namespace FrontoBack.Areas.AdminArea.ViewModel
 {
-	public class Catagorie
+	public class CreateCatagoryVM
 	{
-		[Key]
-		public int Id { get; set; }
+		[Required]
 		public string Name { get; set; }
+		[MaxLength(100)]
 		public string Description { get; set; }
-		public List<Product> Products { get; set; }
-		public Catagorie()
+		public CreateCatagoryVM()
 		{
 		}
 	}

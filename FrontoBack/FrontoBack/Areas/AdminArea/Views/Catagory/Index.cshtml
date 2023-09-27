@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model List<Catagorie>
+   
+<div class="card">
+    <div class="card-body">
+        <a asp-action="Create" class="btn btn-outline-success my-3">Create Catagory</a>
+        <h4 class="card-title">Basic Table</h4>
+        <p class="card-description">
+            Catagory Table
+        </p>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description.</th>
+                        <th>Settings</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var catagory in Model)
+                    {
+                        <tr>
+                            <td>@catagory.Name</td>
+                            <td>@(catagory.Description.Length>30?catagory.Description.Substring(0,20)+"...":catagory.Description.Substring(0,catagory.Description.Length/2)+"...")</td>
+                            <td>
+                                <a asp-action="Delete" asp-route-id="@catagory.Id"><i class="mdi mdi-delete btn btn-outline-danger "> </i></a>
+                                <a asp-action="Update" asp-route-id="@catagory.Id"><i class="mdi mdi-table-edit btn btn-outline-warning"> </i></a>
+                                <a asp-action="Detail" asp-route-id="@catagory.Id"> <i class="mdi mdi-account-card-details btn btn-outline-primary"> </i></a>
+                            </td>
+                        </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -16,60 +16,76 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack
 build_property._RazorSourceGeneratorDebug = 
 
-[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/BasicElements/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0Jhc2ljRWxlbWVudHMvSW5kZXguY3NodG1s
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Catagory/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0NhdGFnb3J5L0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Button/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0J1dHRvbi9JbmRleC5jc2h0bWw=
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Catagory/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0NhdGFnb3J5L0RldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Cart/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0NhcnQvSW5kZXguY3NodG1s
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Catagory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0NhdGFnb3J5L0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Catagory/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0NhdGFnb3J5L1VwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Dashboard/BasicElements.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0Rhc2hib2FyZC9CYXNpY0VsZW1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Dashboard/Button.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0Rhc2hib2FyZC9CdXR0b24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Dashboard/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0Rhc2hib2FyZC9DYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Dashboard/Documentation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0Rhc2hib2FyZC9Eb2N1bWVudGF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Dashboard/Icon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0Rhc2hib2FyZC9JY29uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0Rhc2hib2FyZC9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Documentation/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0RvY3VtZW50YXRpb24vSW5kZXguY3NodG1s
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Dashboard/LockScreen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0Rhc2hib2FyZC9Mb2NrU2NyZWVuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Icon/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0ljb24vSW5kZXguY3NodG1s
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Dashboard/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0Rhc2hib2FyZC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/LockScreen/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0xvY2tTY3JlZW4vSW5kZXguY3NodG1s
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Dashboard/Login2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0Rhc2hib2FyZC9Mb2dpbjIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Login/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0xvZ2luL0luZGV4LmNzaHRtbA==
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Dashboard/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0Rhc2hib2FyZC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Login2/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0xvZ2luMi9JbmRleC5jc2h0bWw=
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Dashboard/Register2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0Rhc2hib2FyZC9SZWdpc3RlcjIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Register/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL1JlZ2lzdGVyL0luZGV4LmNzaHRtbA==
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Dashboard/Table.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0Rhc2hib2FyZC9UYWJsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Register2/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL1JlZ2lzdGVyMi9JbmRleC5jc2h0bWw=
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Dashboard/Typography.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL0Rhc2hib2FyZC9UeXBvZ3JhcGh5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL1NoYXJlZC9fQWRtaW5MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Table/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL1RhYmxlL0luZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/Typography/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW5BcmVhL1ZpZXdzL1R5cG9ncmFwaHkvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Areas/AdminArea/Views/_ViewImports.cshtml]
