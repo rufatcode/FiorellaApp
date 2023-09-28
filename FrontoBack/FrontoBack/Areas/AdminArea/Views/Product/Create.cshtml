@@ -24,14 +24,16 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Price"></label>
-                    <input asp-for="Price" class="form-control" id="ProductPrice" placeholder="Name">
+                    <input asp-for="Price" class="form-control" id="ProductPrice" placeholder="Price">
                     <span asp-validation-for="Price" class=" text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <label asp-for="CatagoryId"></label>
-                    <input asp-for="CatagoryId" class="form-control"  placeholder="Catagoryid">
-                    <span asp-validation-for="CatagoryId" class=" text-danger"></span>
-                </div>
+
+                <select class="d-block my-2" asp-for="CatagoryId">
+                    @foreach (var catagory in ViewBag.Catagories)
+                        {
+                            <option value="@catagory.Id">@catagory.Name</option>
+                        }
+                </select>
 
 
 

@@ -34,6 +34,10 @@
     <None Remove="Areas\AdminArea\Views\Catagory\" />
     <None Remove="Areas\AdminArea\Views\Slider\" />
     <None Remove="Areas\AdminArea\Views\Product\" />
+    <None Remove="Areas\AdminArea\ViewModel\CatagoryVM\" />
+    <None Remove="Areas\AdminArea\ViewModel\SliderVM\" />
+    <None Remove="Areas\AdminArea\ViewModel\ProductVM\" />
+    <None Remove="Areas\AdminArea\Helper\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -65,6 +69,10 @@
     <Folder Include="Areas\AdminArea\Views\Catagory\" />
     <Folder Include="Areas\AdminArea\Views\Slider\" />
     <Folder Include="Areas\AdminArea\Views\Product\" />
+    <Folder Include="Areas\AdminArea\ViewModel\CatagoryVM\" />
+    <Folder Include="Areas\AdminArea\ViewModel\SliderVM\" />
+    <Folder Include="Areas\AdminArea\ViewModel\ProductVM\" />
+    <Folder Include="Areas\AdminArea\Helper\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mELOtTY9tx4XPJao91t7iK9r1nWKeHXDNSHlcdEAa8Q=",
+  "Hash": "wZLODmNFuJfDsfr4mQ7jcOvDUtsVpSjT5JeEu2mWPVc=",
   "Source": "FrontoBack",
   "BasePath": "_content/FrontoBack",
   "Mode": "Default",
@@ -2261,6 +2261,23 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
+      "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/10855612-bb9f-41e7-9e54-8acab38e980eMN.jpg",
+      "SourceId": "FrontoBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/",
+      "BasePath": "_content/FrontoBack",
+      "RelativePath": "img/10855612-bb9f-41e7-9e54-8acab38e980eMN.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/10855612-bb9f-41e7-9e54-8acab38e980eMN.jpg"
+    },
+    {
       "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/1d9ae879-3af0-4de7-888a-26590a194f34photo-1508921912186-1d1a45ebb3c1.jpeg",
       "SourceId": "FrontoBack",
       "SourceType": "Discovered",
@@ -2293,6 +2310,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/8cf1a943-b5b7-45df-8734-a4822ef8c799download.jpeg"
+    },
+    {
+      "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/9a8e0166-41a4-405f-beff-132ea2722c0cinstagram5.jpg",
+      "SourceId": "FrontoBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/",
+      "BasePath": "_content/FrontoBack",
+      "RelativePath": "img/9a8e0166-41a4-405f-beff-132ea2722c0cinstagram5.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/9a8e0166-41a4-405f-beff-132ea2722c0cinstagram5.jpg"
     },
     {
       "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/blog-feature-img-1.jpg",
@@ -2429,23 +2463,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/h3-background-img.jpg"
-    },
-    {
-      "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/h3-slider-background-2.jpg",
-      "SourceId": "FrontoBack",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/",
-      "BasePath": "_content/FrontoBack",
-      "RelativePath": "img/h3-slider-background-2.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/img/h3-slider-background-2.jpg"
     },
     {
       "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/h3-slider-background-3.jpg",

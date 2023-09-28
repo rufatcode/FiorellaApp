@@ -1,21 +1,24 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Update";
 }
-@model CreateSliderVM
+@model UpdateSliderVM
+
+
 <div class="col-md-6 grid-margin stretch-card">
     <div class="card">
+        <img width="200" height="100" src="~/img/@ViewBag.Image" />
         <div class="card-body">
-            <h4 class="card-title"> Create Slider </h4>
+            <h4 class="card-title"> Update Slider </h4>
             <p class="card-description">
                 Basic form layout
             </p>
             <form class="forms-sample" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label asp-for="Image" ></label>
+                    <label asp-for="Image"></label>
                     <input asp-for="Image" class="form-control" id="SliderName" placeholder="Name">
                     <span asp-validation-for="Image" class=" text-danger"></span>
                 </div>
-               
+
 
 
                 <button type="submit" class="btn btn-primary mr-2">Submit</button>
@@ -31,5 +34,4 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
 }
-
 

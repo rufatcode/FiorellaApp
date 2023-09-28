@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FrontoBack.Areas.AdminArea.Helper;
 using FrontoBack.Areas.AdminArea.ViewModel;
+using FrontoBack.Areas.AdminArea.ViewModel.SliderVM;
 using FrontoBack.DAL;
 using FrontoBack.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -40,12 +42,12 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             {
                 return View();
             }
-            if (!createSliderVM.Image.ContentType.Contains("image"))
+            if (!createSliderVM.Image.IsImage())
             {
                 ModelState.AddModelError("Image", "Only Image");
                 return View();
             }
-            else if (createSliderVM.Image.Length/1024>1000)
+            else if (!createSliderVM.Image.IsLenghSuit(1000))
             {
                 ModelState.AddModelError("Image", "max size must be 1kb");
                 return View();
@@ -78,6 +80,50 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             _context.Sliders.Remove(slider);
             _context.SaveChanges();
             
+            return RedirectToAction("Index","Slider");
+        }
+        public IActionResult Update(int? id)
+        {
+            if (id==null)
+            {
+                return BadRequest("Slider not found");
+            }
+            Slider slider = _context.Sliders.FirstOrDefault(s => s.Id == id);
+            if (slider==null)
+            {
+                return NotFound("slider not exist");
+            }
+            ViewBag.Image = slider.ImgSrc;
+            return View();
+        }
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+        public IActionResult Update(int id,UpdateSliderVM updateSliderVM)
+        {
+            ViewBag.Image = _context.Sliders.FirstOrDefault(s=>s.Id==id).ImgSrc;
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            else if (!updateSliderVM.Image.IsImage())
+            {
+                ModelState.AddModelError("Image", "Only Image");
+                return View();
+            }
+            else if (!updateSliderVM.Image.IsLenghSuit(1000))
+            {
+                ModelState.AddModelError("Image", "size must be smaller than 1kb");
+                return View();
+            }
+            string fileName = Guid.NewGuid().ToString() + updateSliderVM.Image.FileName;
+            string path = Path.Combine(_webHostEnvironment.WebRootPath, "img",fileName);
+            using(FileStream stream=new FileStream(path, FileMode.Create)){
+                updateSliderVM.Image.CopyTo(stream);
+            }
+            Slider slider = _context.Sliders.FirstOrDefault(s => s.Id == id);
+            System.IO.File.Delete(Path.Combine(_webHostEnvironment.WebRootPath, "img", slider.ImgSrc));
+            slider.ImgSrc = fileName;
+            _context.SaveChanges();
             return RedirectToAction("Index","Slider");
         }
     }
