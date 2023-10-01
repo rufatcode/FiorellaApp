@@ -143,7 +143,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item my-auto shop-cart">
-                                <a asp-controller="Product" asp-action="ShowBasket"><i class="fas fa-shopping-bag"></i></a>
+                                <a asp-controller="Basket" asp-action="Index"><i class="fas fa-shopping-bag"></i></a>
                                 <sup class="rounded-circle">@ViewBag.ProductCount</sup>
                                 <span>CART ($@ViewBag.TotalPrice)</span>
                                 @if (ViewBag.ProductCount == 0)

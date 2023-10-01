@@ -23,7 +23,6 @@
     <None Remove="Views\Shared\Components\Header\" />
     <None Remove="Views\Shared\Components\Footer\" />
     <None Remove="Services\" />
-    <None Remove="Services\Interfaces\" />
     <None Remove="Areas\" />
     <None Remove="Areas\AdminArea\" />
     <None Remove="Areas\AdminArea\Controllers\" />
@@ -38,6 +37,9 @@
     <None Remove="Areas\AdminArea\ViewModel\SliderVM\" />
     <None Remove="Areas\AdminArea\ViewModel\ProductVM\" />
     <None Remove="Areas\AdminArea\Helper\" />
+    <None Remove="Services\BasketServices\" />
+    <None Remove="Services\BasketServices\Interfaces\" />
+    <None Remove="Views\Basket\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -57,7 +59,6 @@
     <Folder Include="Views\Shared\Components\Header\" />
     <Folder Include="Views\Shared\Components\Footer\" />
     <Folder Include="Services\" />
-    <Folder Include="Services\Interfaces\" />
     <Folder Include="Areas\" />
     <Folder Include="Areas\AdminArea\" />
     <Folder Include="Areas\AdminArea\Controllers\" />
@@ -73,6 +74,9 @@
     <Folder Include="Areas\AdminArea\ViewModel\SliderVM\" />
     <Folder Include="Areas\AdminArea\ViewModel\ProductVM\" />
     <Folder Include="Areas\AdminArea\Helper\" />
+    <Folder Include="Services\BasketServices\" />
+    <Folder Include="Services\BasketServices\Interfaces\" />
+    <Folder Include="Views\Basket\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />

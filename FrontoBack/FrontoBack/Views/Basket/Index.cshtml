@@ -1,18 +1,19 @@
 ﻿@{
-    ViewBag.Title = "ShowBasket";
+    ViewBag.Title = "Index";
 }
 
 @model List<BasketVM>
 <style>
     .fa-solid {
-       
         cursor: pointer;
     }
+
     .describeIncon:hover {
         background-color: red;
         border-color: red;
         color: white;
     }
+
     .describeIncon {
         display: block;
         padding: 5px;
@@ -20,7 +21,7 @@
         height: 25px;
         border: 1px solid gray;
         border-radius: 5px;
-        margin:6px 0px;
+        margin: 6px 0px;
     }
 </style>
 <table class="table w-75 m-auto">
@@ -44,19 +45,16 @@
                 <td>@item.ProductCount</td>
                 <td>@item.Name</td>
                 <td>
-                    <a asp-controller="Product" asp-action="IncreaseProduct" asp-route-id="@item.Id"><i class="fa-solid fa-plus describeIncon"></i></a>
+                    <a asp-controller="Basket" asp-action="IncreaseProduct" asp-route-id="@item.Id"><i class="fa-solid fa-plus describeIncon"></i></a>
                     @item.Price
-                    <a asp-controller="Product" asp-action="DecreaseProduct" asp-route-id="@item.Id"><i class="fa-solid fa-minus describeIncon"></i></a>
+                    <a asp-controller="Basket" asp-action="DecreaseProduct" asp-route-id="@item.Id"><i class="fa-solid fa-minus describeIncon"></i></a>
                 </td>
-                <td><a style="display:block;margin-top:25px; " asp-controller="Product" asp-action="RemoveProduct" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i></a></td>
+                <td><a style="display:block;margin-top:25px; " asp-controller="Basket" asp-action="RemoveProduct" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i></a></td>
             </tr>
         }
 
     </tbody>
-    
+
 </table>
 <div class="w-75 m-auto text-center"><a style="display:block;text-decoration:none;color:red;margin:10px auto;" asp-controller="Product" asp-action="Index">Go To Home</a></div>
-
-
-
 

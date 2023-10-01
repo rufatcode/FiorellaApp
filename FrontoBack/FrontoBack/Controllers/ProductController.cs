@@ -17,19 +17,9 @@ namespace FrontoBack.Controllers
     public class ProductController : Controller
     {
         private readonly AppDbContext _context;
-        private readonly IAddProductService _addProduct;
-        private readonly IShowBasketService _showBasketService;
-        private readonly IRemoveProductService _removeProductService;
-        private readonly IIncreaseProductService _increaseProductService;
-        private readonly IDecreaseProductService _decreaseProductService;
-        public ProductController(AppDbContext context, IAddProductService addProductService,IShowBasketService showBasketService, IRemoveProductService removeProductService, IIncreaseProductService increaseProductService, IDecreaseProductService decreaseProductService)
+        public ProductController(AppDbContext context)
         {
             _context = context;
-            _addProduct = addProductService;
-            _showBasketService = showBasketService;
-            _removeProductService = removeProductService;
-            _increaseProductService = increaseProductService;
-            _decreaseProductService = decreaseProductService;
         }
         public IActionResult Index()
         {
@@ -72,76 +62,7 @@ namespace FrontoBack.Controllers
                 
             return PartialView("_ProductSearchPartial",products);
         }
-        public IActionResult Basket(int  id)
-        {
-            //Response.Cookies.Append("Test","Hello",new CookieOptions { MaxAge=TimeSpan.FromMinutes(20)});
-            //HttpContext.Session.SetString("Test1", "Hi");
-            //HttpContext.Session.Remove("Test1");
-            Product existProduct = _context.Products.FirstOrDefault(p => p.Id == id);
-            if (id==0||existProduct==null)
-            {
-                return RedirectToAction("Index");
-            }
-            _addProduct.Add(id);
-            return RedirectToAction("ShowBasket");
-        }
-        public IActionResult ShowBasket()
-        {
-            string data = Request.Cookies["Basket"];
-            if (data==null||data=="[]")
-            {
-                return RedirectToAction("Index");
-            }
-            
-            return View(_showBasketService.Show());
-        }
-        public IActionResult RemoveProduct(int   id)
-        {
-            Product existProduct = _context.Products.FirstOrDefault(p => p.Id == id);
-            if (existProduct==null||id==0)
-            {
-                return Redirect("/Product/Index");
-            }
-            string data = Request.Cookies["Basket"];
-            if (data==null)
-            {
-                return Redirect("/Product/Index");
-            }
-            _removeProductService.Remove(id, data);
-            return Redirect("/Product/ShowBasket");
-        }
-        public IActionResult IncreaseProduct(int  id)
-        {
-            Product existProduct = _context.Products.FirstOrDefault(p => p.Id == id);
-            if (existProduct == null||id==0)
-            {
-                return RedirectToAction("Index");
-            }
-            string data = Request.Cookies["Basket"];
-            if (data==null)
-            {
-                return RedirectToAction("Index");
-            }
-
-            _increaseProductService.Increase(id, data);
-            return RedirectToAction("ShowBasket");
-        }
-        public IActionResult DecreaseProduct(int  id)
-        {
-            Product existProduct = _context.Products.FirstOrDefault(p => p.Id == id);
-            if (existProduct == null || id == 0)
-            {
-                return RedirectToAction("Index");
-            }
-            string data = Request.Cookies["Basket"];
-            if (data == null)
-            {
-                return RedirectToAction("Index");
-            }
-
-            _decreaseProductService.Decrease(id, data);
-            return RedirectToAction("ShowBasket");
-        }
+       
         public IActionResult Test()
         {
             List<Product> products = _context.Products

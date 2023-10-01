@@ -15,7 +15,7 @@
                 <h6>@(Model.Name)</h6>
             </div>
             <div class="price">
-                <span class="text-black-50"><a style="text-decoration:none;color:gray;" asp-controller="Product" asp-action="Basket" asp-route-id="@Model.Id">Add to cart</a></span>
+                <span class="text-black-50"><a style="text-decoration:none;color:gray;" asp-controller="Basket" asp-action="Basket" asp-route-id="@Model.Id">Add to cart</a></span>
                 <span class="text-black-50">$@(Model.Price)</span>
             </div>
         </div>
