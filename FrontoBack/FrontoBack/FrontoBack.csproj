@@ -37,8 +37,6 @@
     <None Remove="Areas\AdminArea\ViewModel\SliderVM\" />
     <None Remove="Areas\AdminArea\ViewModel\ProductVM\" />
     <None Remove="Areas\AdminArea\Helper\" />
-    <None Remove="Services\BasketServices\" />
-    <None Remove="Services\BasketServices\Interfaces\" />
     <None Remove="Views\Basket\" />
   </ItemGroup>
   <ItemGroup>
@@ -74,8 +72,6 @@
     <Folder Include="Areas\AdminArea\ViewModel\SliderVM\" />
     <Folder Include="Areas\AdminArea\ViewModel\ProductVM\" />
     <Folder Include="Areas\AdminArea\Helper\" />
-    <Folder Include="Services\BasketServices\" />
-    <Folder Include="Services\BasketServices\Interfaces\" />
     <Folder Include="Views\Basket\" />
   </ItemGroup>
   <ItemGroup>

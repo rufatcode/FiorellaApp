@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using FrontoBack.DAL;
 using FrontoBack.Models;
-using FrontoBack.Services.Interfaces;
+using FrontoBack.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,19 +15,11 @@ namespace FrontoBack.Controllers
     public class BasketController : Controller
     {
         private readonly AppDbContext _context;
-        private readonly IAddProductService _addProduct;
-        private readonly IShowBasketService _showBasketService;
-        private readonly IRemoveProductService _removeProductService;
-        private readonly IIncreaseProductService _increaseProductService;
-        private readonly IDecreaseProductService _decreaseProductService;
-        public BasketController(AppDbContext context, IAddProductService addProductService, IShowBasketService showBasketService, IRemoveProductService removeProductService, IIncreaseProductService increaseProductService, IDecreaseProductService decreaseProductService)
+        private readonly IBasketServices _basketServices;
+        public BasketController(AppDbContext context, IBasketServices basketServices)
         {
             _context = context;
-            _addProduct = addProductService;
-            _showBasketService = showBasketService;
-            _removeProductService = removeProductService;
-            _increaseProductService = increaseProductService;
-            _decreaseProductService = decreaseProductService;
+            _basketServices = basketServices;
         }
         
         public IActionResult Index()
@@ -38,7 +30,7 @@ namespace FrontoBack.Controllers
                 return RedirectToAction("Index","Product");
             }
 
-            return View(_showBasketService.Show());
+            return View(_basketServices.Show());
         }
         public IActionResult Basket(int id)
         {
@@ -50,7 +42,7 @@ namespace FrontoBack.Controllers
             {
                 return RedirectToAction("Index","Product");
             }
-            _addProduct.Add(id);
+            _basketServices.Add(id);
             return RedirectToAction("Index");
         }
        
@@ -66,7 +58,7 @@ namespace FrontoBack.Controllers
             {
                 return Redirect("/Product/Index");
             }
-            _removeProductService.Remove(id, data);
+            _basketServices.Remove(id, data);
             return Redirect("/Basket/Index");
         }
         public IActionResult IncreaseProduct(int id)
@@ -82,7 +74,7 @@ namespace FrontoBack.Controllers
                 return RedirectToAction("Index", "Product");
             }
 
-            _increaseProductService.Increase(id, data);
+            _basketServices.Increase(id, data);
             return RedirectToAction("Index");
         }
         public IActionResult DecreaseProduct(int id)
@@ -98,7 +90,7 @@ namespace FrontoBack.Controllers
                 return RedirectToAction("Index", "Product");
             }
 
-            _decreaseProductService.Decrease(id, data);
+            _basketServices.Decrease(id, data);
             return RedirectToAction("Index");
         }
     }
