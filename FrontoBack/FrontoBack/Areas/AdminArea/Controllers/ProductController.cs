@@ -110,12 +110,17 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             {
                 return NotFound();
             }
-            return View(new UpdateProductVM { Name=product.Name,Price=product.Price,CatagoryId=product.CatagorieId,ImgSrc=product.ImgSrc});
+            ViewBag.Catagories = _context.Catagories.ToList();
+            ViewBag.Imgsrc = product.ImgSrc;
+            return View(new UpdateProductVM { Name=product.Name,Price=product.Price,CatagoryId=product.CatagorieId});
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]
         public IActionResult Update(int id,UpdateProductVM updateProductVM)
         {
+            ViewBag.Catagories = _context.Catagories.ToList();
+            Product existProduct = _context.Products.FirstOrDefault(p => p.Id == id);
+            ViewBag.Imgsrc = existProduct.ImgSrc;
             if (!ModelState.IsValid)
             {
                 return View();
@@ -128,6 +133,24 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             {
                 return View();
             }
+           
+            if (_context.Products.Any(p=>p.Name.ToLower()==updateProductVM.Name.ToLower()&&updateProductVM.Name.ToLower()!=existProduct.Name.ToLower()))
+            {
+                ModelState.AddModelError("Name","Name is exist");
+                return View();
+            }
+            string fileName = Guid.NewGuid().ToString() + updateProductVM.Image.FileName;
+            string path = Path.Combine(_webHostEnvironment.WebRootPath, "img", fileName);
+            using(FileStream stream=new FileStream(path, FileMode.Create))
+            {
+                updateProductVM.Image.CopyTo(stream);
+            }
+            System.IO.File.Delete(Path.Combine(_webHostEnvironment.WebRootPath,"img", existProduct.ImgSrc));
+            existProduct.ImgSrc = fileName;
+            existProduct.Name = updateProductVM.Name;
+            existProduct.Price = updateProductVM.Price;
+            existProduct.CatagorieId = updateProductVM.CatagoryId;
+            _context.SaveChanges();
 
             return RedirectToAction("Index", "Product");
         }

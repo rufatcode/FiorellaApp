@@ -533,12 +533,20 @@
       "PackagePath": "staticwebassets/img/1d9ae879-3af0-4de7-888a-26590a194f34photo-1508921912186-1d1a45ebb3c1.jpeg"
     },
     {
-      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/8cf1a943-b5b7-45df-8734-a4822ef8c799download.jpeg",
-      "PackagePath": "staticwebassets/img/8cf1a943-b5b7-45df-8734-a4822ef8c799download.jpeg"
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/79e4b1d9-032e-471c-88ca-5386eb678337testimonial-img-2.png",
+      "PackagePath": "staticwebassets/img/79e4b1d9-032e-471c-88ca-5386eb678337testimonial-img-2.png"
     },
     {
-      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/9a8e0166-41a4-405f-beff-132ea2722c0cinstagram5.jpg",
-      "PackagePath": "staticwebassets/img/9a8e0166-41a4-405f-beff-132ea2722c0cinstagram5.jpg"
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/839f426f-2cee-4daf-bbf6-930f857f8b22instagram2.jpg",
+      "PackagePath": "staticwebassets/img/839f426f-2cee-4daf-bbf6-930f857f8b22instagram2.jpg"
+    },
+    {
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/843f2504-8a61-426c-ae00-9e98781d2554instagram4.jpg",
+      "PackagePath": "staticwebassets/img/843f2504-8a61-426c-ae00-9e98781d2554instagram4.jpg"
+    },
+    {
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/8cf1a943-b5b7-45df-8734-a4822ef8c799download.jpeg",
+      "PackagePath": "staticwebassets/img/8cf1a943-b5b7-45df-8734-a4822ef8c799download.jpeg"
     },
     {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/blog-feature-img-1.jpg",
@@ -551,6 +559,14 @@
     {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/blog-feature-img-4.jpg",
       "PackagePath": "staticwebassets/img/blog-feature-img-4.jpg"
+    },
+    {
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/d0d07fbd-04dc-4f2c-902a-26afd8f00a3ch3-team-img-3.png",
+      "PackagePath": "staticwebassets/img/d0d07fbd-04dc-4f2c-902a-26afd8f00a3ch3-team-img-3.png"
+    },
+    {
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/d1a19e6a-bd45-4c46-81b9-c5701b681d6cshop-12-img.jpg",
+      "PackagePath": "staticwebassets/img/d1a19e6a-bd45-4c46-81b9-c5701b681d6cshop-12-img.jpg"
     },
     {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/favicon.png",
