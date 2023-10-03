@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Detail";
+}
+@model Country
+<div class="col-lg-12 grid-margin stretch-card ">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Country Table</h4>
+            <p class="card-description">
+                Add class <code>.table</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Population</th>
+                            <th>City(Capital)</th>
+                            <th>Cities</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Model.Name</td>
+                            <td>@Model.Population</td>
+                            <td>@(Model.Cities.FirstOrDefault(c => c.IsCapital)!=null? Model.Cities.FirstOrDefault(c => c.IsCapital).Name:"")</td>
+                           <td>
+                               <ul>
+                               @foreach (var city in Model.Cities)
+                                   {
+                                       <li style="list-style:none;">@city.Name</li>
+                                   }
+                                </ul>
+                           </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

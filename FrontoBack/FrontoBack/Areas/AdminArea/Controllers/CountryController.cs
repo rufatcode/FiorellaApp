@@ -23,7 +23,7 @@ namespace FrontoBack.Areas.AdminArea.Controllers
         }
         public  IActionResult Index()
         {
-            return View(_context.Countries.ToList());
+            return View(_context.Countries.AsNoTracking().Include(c=>c.Cities).ToList());
         }
         public async Task<IActionResult> Create()
         {
@@ -92,6 +92,20 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             existCountry.Population = updateCountryVM.Population;
             _context.SaveChangesAsync();
             return RedirectToAction("Index", "Country");
+        }
+        public async Task<IActionResult> Detail(int? id)
+        {
+            if (id==null)
+            {
+                return BadRequest("COuntry Is not Exist");
+            }
+            Country existCountry = _context.Countries.AsNoTracking().Include(c=>c.Cities).FirstOrDefault(c => c.Id == id);
+            if (existCountry==null)
+            {
+                return NotFound();
+            }
+
+            return View(existCountry);
         }
     }
 }

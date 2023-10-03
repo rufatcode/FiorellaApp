@@ -45,6 +45,8 @@
     <None Remove="ViewModel\GanreVM\" />
     <None Remove="ViewModel\CountryVM\" />
     <None Remove="Areas\AdminArea\Views\Country\" />
+    <None Remove="Areas\AdminArea\Views\City\" />
+    <None Remove="ViewModel\CityVM\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -87,6 +89,8 @@
     <Folder Include="ViewModel\GanreVM\" />
     <Folder Include="ViewModel\CountryVM\" />
     <Folder Include="Areas\AdminArea\Views\Country\" />
+    <Folder Include="Areas\AdminArea\Views\City\" />
+    <Folder Include="ViewModel\CityVM\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />

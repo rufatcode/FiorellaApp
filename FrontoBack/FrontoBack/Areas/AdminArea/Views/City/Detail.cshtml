@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Detail";
+}
+@model City;
+
+
+
+<div class="col-lg-12 grid-margin stretch-card ">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">City Table</h4>
+            <p class="card-description">
+                Add class <code>.table</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Population</th>
+                            <th>Country</th>
+                            <th>Streets</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Model.Name</td>
+                            <td>@Model.Population</td>
+                            <td>@Model.Country.Name</td>
+                            <td>
+                                <ul>
+                                    @foreach (var street in Model.Streets)
+                                    {
+                                        <li style="list-style:none;">@street.Name</li>
+                                    }
+                                </ul>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

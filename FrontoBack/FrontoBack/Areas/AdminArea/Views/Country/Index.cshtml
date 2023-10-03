@@ -27,7 +27,7 @@
                             <tr>
                                 <td>@country.Name</td>
                                 <td>@country.Population</td>
-                                <td>@country.Cities.FirstOrDefault(c => c.IsCapital)</td>
+                                <td>@(country.Cities.FirstOrDefault(c => c.IsCapital)!=null? country.Cities.FirstOrDefault(c => c.IsCapital).Name:"")</td>
                                 <td>
                                     <a asp-action="Delete" asp-route-id="@country.Id"><i class="mdi mdi-delete btn btn-outline-danger "> </i></a>
                                     <a asp-action="Update" asp-route-id="@country.Id"><i class="mdi mdi-table-edit btn btn-outline-warning"> </i></a>

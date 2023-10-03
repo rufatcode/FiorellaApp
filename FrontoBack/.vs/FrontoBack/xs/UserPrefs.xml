@@ -1,43 +1,45 @@
 ﻿<Properties StartupConfiguration="{93D03148-B11C-40C6-8D8D-78DB715165B7}|Default">
-  <MonoDevelop.Ide.ItemProperties.FrontoBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <AuthorInfo Name="rufat" Email="rufatri@code.edu.az" Copyright="" Company="" Trademark="" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.FrontoBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FrontoBack/ServiceRegistration.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FrontoBack/Areas/AdminArea/Views/City/Index.cshtml">
     <Files>
-      <File FileName="FrontoBack/Areas/AdminArea/Views/Product/Update.cshtml" />
-      <File FileName="FrontoBack/Areas/AdminArea/Controllers/ProductController.cs" />
-      <File FileName="FrontoBack/Areas/AdminArea/ViewModel/ProductVM/UpdateProductVM.cs" />
-      <File FileName="FrontoBack/Models/Catagorie.cs" />
-      <File FileName="FrontoBack/Models/Product.cs" />
-      <File FileName="FrontoBack/Areas/AdminArea/Helper/FileExtention.cs" />
-      <File FileName="FrontoBack/Controllers/ProductController.cs" Line="6" Column="25" />
-      <File FileName="FrontoBack/ServiceRegistration.cs" Line="3" Column="27" />
-      <File FileName="FrontoBack/Controllers/BasketController.cs" Line="93" Column="28" />
-      <File FileName="FrontoBack/Views/Product/Product.cshtml" />
-      <File FileName="FrontoBack/Views/Product/Index.cshtml" />
-      <File FileName="FrontoBack/ViewComponents/ProductViewComponent.cs" />
-      <File FileName="FrontoBack/Views/Basket/Index.cshtml" Line="59" Column="135" />
-      <File FileName="FrontoBack/Controllers/HomeController.cs" />
-      <File FileName="FrontoBack/Views/Shared/_Layout.cshtml" />
-      <File FileName="FrontoBack/Views/Shared/Components/Header/Default.cshtml" />
-      <File FileName="FrontoBack/Views/Shared/Components/Product/Default.cshtml" />
-      <File FileName="FrontoBack/Views/Shared/_ProductPartial.cshtml" />
-      <File FileName="FrontoBack/Services/IBasketServices.cs" Line="12" Column="31" />
-      <File FileName="FrontoBack/Services/BasketService.cs" Line="10" Column="45" />
-      <File FileName="FrontoBack/Services/BasketServices/IncreaseProductService.cs" Line="11" Column="3" />
+      <File FileName="FrontoBack/Areas/AdminArea/Controllers/CountryController.cs" Line="102" Column="89" />
+      <File FileName="FrontoBack/Areas/AdminArea/Views/Country/Index.cshtml" />
+      <File FileName="FrontoBack/DAL/AppDbContext.cs" />
+      <File FileName="FrontoBack/Areas/AdminArea/Views/Country/Update.cshtml" />
+      <File FileName="FrontoBack/Areas/AdminArea/Views/Country/Create.cshtml" />
+      <File FileName="FrontoBack/ViewModel/CountryVM/UpdateCountryVM.cs" />
+      <File FileName="FrontoBack/ViewModel/CountryVM/CreateCountryVM.cs" />
+      <File FileName="FrontoBack/Areas/AdminArea/Views/Country/Detail.cshtml" />
+      <File FileName="FrontoBack/Areas/AdminArea/Controllers/CityController.cs" Line="23" Column="25" />
+      <File FileName="FrontoBack/Areas/AdminArea/Views/City/Index.cshtml" Line="7" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="FrontoBack">
-            <Node name="FrontoBack" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="ViewComponents" expanded="True" />
+          <Node name="FrontoBack" expanded="True">
+            <Node name="FrontoBack">
+              <Node name="Areas" expanded="True">
+                <Node name="AdminArea" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                  <Node name="Helper" expanded="True" />
+                  <Node name="Views" expanded="True">
+                    <Node name="City" expanded="True">
+                      <Node name="Index.cshtml" selected="True" />
+                    </Node>
+                    <Node name="Shared" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="DAL" expanded="True" />
+              <Node name="ViewModel" expanded="True">
+                <Node name="CountryVM" expanded="True" />
+              </Node>
               <Node name="Views" expanded="True">
                 <Node name="Basket" expanded="True" />
                 <Node name="Product" expanded="True" />
@@ -53,5 +55,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <AuthorInfo Name="rufat" Email="rufatri@code.edu.az" Copyright="" Company="" Trademark="" />
 </Properties>
