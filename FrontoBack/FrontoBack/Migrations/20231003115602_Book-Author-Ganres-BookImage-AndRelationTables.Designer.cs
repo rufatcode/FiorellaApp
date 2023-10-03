@@ -4,6 +4,7 @@ using FrontoBack.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FrontoBack.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231003115602_Book-Author-Ganres-BookImage-AndRelationTables")]
+    partial class BookAuthorGanresBookImageAndRelationTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,19 +53,11 @@ namespace FrontoBack.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("StreetId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("StreetId");
 
                     b.ToTable("Authors");
                 });
@@ -107,12 +101,6 @@ namespace FrontoBack.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("PageCount")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -206,54 +194,6 @@ namespace FrontoBack.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Catagories");
-                });
-
-            modelBuilder.Entity("FrontoBack.Models.City", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("CountryId")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("IsCapital")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Population")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CountryId");
-
-                    b.ToTable("Cities");
-                });
-
-            modelBuilder.Entity("FrontoBack.Models.Country", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<long>("Population")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("FrontoBack.Models.FlowerExpert", b =>
@@ -390,39 +330,6 @@ namespace FrontoBack.Migrations
                     b.ToTable("SliderContents");
                 });
 
-            modelBuilder.Entity("FrontoBack.Models.Street", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("CityId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CityId");
-
-                    b.ToTable("Streets");
-                });
-
-            modelBuilder.Entity("FrontoBack.Models.Author", b =>
-                {
-                    b.HasOne("FrontoBack.Models.Street", "Street")
-                        .WithMany("Authors")
-                        .HasForeignKey("StreetId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Street");
-                });
-
             modelBuilder.Entity("FrontoBack.Models.BookAuthor", b =>
                 {
                     b.HasOne("FrontoBack.Models.Author", "Author")
@@ -472,17 +379,6 @@ namespace FrontoBack.Migrations
                     b.Navigation("Book");
                 });
 
-            modelBuilder.Entity("FrontoBack.Models.City", b =>
-                {
-                    b.HasOne("FrontoBack.Models.Country", "Country")
-                        .WithMany("Cities")
-                        .HasForeignKey("CountryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Country");
-                });
-
             modelBuilder.Entity("FrontoBack.Models.Product", b =>
                 {
                     b.HasOne("FrontoBack.Models.Catagorie", "Catagories")
@@ -492,17 +388,6 @@ namespace FrontoBack.Migrations
                         .IsRequired();
 
                     b.Navigation("Catagories");
-                });
-
-            modelBuilder.Entity("FrontoBack.Models.Street", b =>
-                {
-                    b.HasOne("FrontoBack.Models.City", "City")
-                        .WithMany("Streets")
-                        .HasForeignKey("CityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("City");
                 });
 
             modelBuilder.Entity("FrontoBack.Models.Author", b =>
@@ -524,24 +409,9 @@ namespace FrontoBack.Migrations
                     b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("FrontoBack.Models.City", b =>
-                {
-                    b.Navigation("Streets");
-                });
-
-            modelBuilder.Entity("FrontoBack.Models.Country", b =>
-                {
-                    b.Navigation("Cities");
-                });
-
             modelBuilder.Entity("FrontoBack.Models.Ganre", b =>
                 {
                     b.Navigation("BookGanres");
-                });
-
-            modelBuilder.Entity("FrontoBack.Models.Street", b =>
-                {
-                    b.Navigation("Authors");
                 });
 #pragma warning restore 612, 618
         }

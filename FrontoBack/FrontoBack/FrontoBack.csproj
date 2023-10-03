@@ -29,15 +29,22 @@
     <None Remove="Areas\AdminArea\Views\" />
     <None Remove="Areas\AdminArea\Views\Shared\" />
     <None Remove="Areas\AdminArea\Views\Dashboard\" />
-    <None Remove="Areas\AdminArea\ViewModel\" />
     <None Remove="Areas\AdminArea\Views\Catagory\" />
     <None Remove="Areas\AdminArea\Views\Slider\" />
     <None Remove="Areas\AdminArea\Views\Product\" />
-    <None Remove="Areas\AdminArea\ViewModel\CatagoryVM\" />
-    <None Remove="Areas\AdminArea\ViewModel\SliderVM\" />
-    <None Remove="Areas\AdminArea\ViewModel\ProductVM\" />
     <None Remove="Areas\AdminArea\Helper\" />
     <None Remove="Views\Basket\" />
+    <None Remove="Areas\AdminArea\Views\Book\" />
+    <None Remove="Areas\AdminArea\Views\Ganre\" />
+    <None Remove="Areas\AdminArea\Views\Author\" />
+    <None Remove="ViewModel\CatagoryVM\" />
+    <None Remove="ViewModel\ProductVM\" />
+    <None Remove="ViewModel\SliderVM\" />
+    <None Remove="ViewModel\BookVM\" />
+    <None Remove="ViewModel\AuthorVM\" />
+    <None Remove="ViewModel\GanreVM\" />
+    <None Remove="ViewModel\CountryVM\" />
+    <None Remove="Areas\AdminArea\Views\Country\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -64,15 +71,22 @@
     <Folder Include="Areas\AdminArea\Views\Shared\" />
     <Folder Include="wwwroot\admin\" />
     <Folder Include="Areas\AdminArea\Views\Dashboard\" />
-    <Folder Include="Areas\AdminArea\ViewModel\" />
     <Folder Include="Areas\AdminArea\Views\Catagory\" />
     <Folder Include="Areas\AdminArea\Views\Slider\" />
     <Folder Include="Areas\AdminArea\Views\Product\" />
-    <Folder Include="Areas\AdminArea\ViewModel\CatagoryVM\" />
-    <Folder Include="Areas\AdminArea\ViewModel\SliderVM\" />
-    <Folder Include="Areas\AdminArea\ViewModel\ProductVM\" />
     <Folder Include="Areas\AdminArea\Helper\" />
     <Folder Include="Views\Basket\" />
+    <Folder Include="Areas\AdminArea\Views\Book\" />
+    <Folder Include="Areas\AdminArea\Views\Ganre\" />
+    <Folder Include="Areas\AdminArea\Views\Author\" />
+    <Folder Include="ViewModel\CatagoryVM\" />
+    <Folder Include="ViewModel\ProductVM\" />
+    <Folder Include="ViewModel\SliderVM\" />
+    <Folder Include="ViewModel\BookVM\" />
+    <Folder Include="ViewModel\AuthorVM\" />
+    <Folder Include="ViewModel\GanreVM\" />
+    <Folder Include="ViewModel\CountryVM\" />
+    <Folder Include="Areas\AdminArea\Views\Country\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />

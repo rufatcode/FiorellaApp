@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model UpdateCountryVM
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Country form</h4>
+            <p class="card-description">
+                Basic form layout
+            </p>
+            <form method="post" class="forms-sample">
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" id="CountryName" placeholder="Name" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Population"></label>
+                    <input asp-for="Population" class="form-control" id="CountryPopulation" placeholder="Population" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Population"></span>
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button asp-action="Index" class="btn btn-light">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section CostumScripts{
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}
