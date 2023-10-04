@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@model List<Street>
+
+<div class="col-lg-12 grid-margin stretch-card ">
+    <div class="card">
+        <div class="card-body">
+            <a asp-action="Create" class="btn btn-outline-success my-3">Create Street</a>
+            <h4 class="card-title">Street Table</h4>
+            <p class="card-description">
+                Add class <code>.table</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>City</th>
+                            <th>Settings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var street in Model)
+                        {
+                            <tr>
+                                <td>@street.Name</td>
+                                <td>@street.City.Name</td>
+                                <td>
+                                    <a asp-action="Delete" asp-route-id="@street.Id"><i class="mdi mdi-delete btn btn-outline-danger "> </i></a>
+                                    <a asp-action="Update" asp-route-id="@street.Id"><i class="mdi mdi-table-edit btn btn-outline-warning"> </i></a>
+                                    <a asp-action="Detail" asp-route-id="@street.Id"> <i class="mdi mdi-account-card-details btn btn-outline-primary"> </i></a>
+                                </td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -26,9 +26,9 @@
                             <td>@(Model.Cities.FirstOrDefault(c => c.IsCapital)!=null? Model.Cities.FirstOrDefault(c => c.IsCapital).Name:"")</td>
                            <td>
                                <ul>
-                               @foreach (var city in Model.Cities)
+                               @foreach (var city in Model.Cities.Where(c=>!c.IsCapital))
                                    {
-                                       <li style="list-style:none;">@city.Name</li>
+                                       <li style="list-style:none;"><a asp-controller="City" asp-action="Detail" asp-route-id="@city.Id">@city.Name</a></li>
                                    }
                                 </ul>
                            </td>

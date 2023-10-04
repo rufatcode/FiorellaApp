@@ -6,39 +6,33 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.FrontoBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FrontoBack/Areas/AdminArea/Views/City/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FrontoBack/Areas/AdminArea/Controllers/CityController.cs">
     <Files>
-      <File FileName="FrontoBack/Areas/AdminArea/Controllers/CountryController.cs" Line="102" Column="89" />
-      <File FileName="FrontoBack/Areas/AdminArea/Views/Country/Index.cshtml" />
-      <File FileName="FrontoBack/DAL/AppDbContext.cs" />
-      <File FileName="FrontoBack/Areas/AdminArea/Views/Country/Update.cshtml" />
-      <File FileName="FrontoBack/Areas/AdminArea/Views/Country/Create.cshtml" />
-      <File FileName="FrontoBack/ViewModel/CountryVM/UpdateCountryVM.cs" />
-      <File FileName="FrontoBack/ViewModel/CountryVM/CreateCountryVM.cs" />
-      <File FileName="FrontoBack/Areas/AdminArea/Views/Country/Detail.cshtml" />
-      <File FileName="FrontoBack/Areas/AdminArea/Controllers/CityController.cs" Line="23" Column="25" />
-      <File FileName="FrontoBack/Areas/AdminArea/Views/City/Index.cshtml" Line="7" Column="1" />
+      <File FileName="FrontoBack/Areas/AdminArea/Controllers/CityController.cs" Line="118" Column="108" />
+      <File FileName="FrontoBack/Areas/AdminArea/Views/City/Create.cshtml" Line="34" Column="19" />
+      <File FileName="FrontoBack/Areas/AdminArea/Views/Country/Create.cshtml" Line="26" Column="19" />
+      <File FileName="FrontoBack/Areas/AdminArea/Views/City/Detail.cshtml" Line="34" Column="77" />
+      <File FileName="FrontoBack/Areas/AdminArea/Views/Country/Detail.cshtml" Line="5" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FrontoBack" expanded="True">
-            <Node name="FrontoBack">
+            <Node name="FrontoBack" expanded="True">
               <Node name="Areas" expanded="True">
                 <Node name="AdminArea" expanded="True">
                   <Node name="Controllers" expanded="True" />
-                  <Node name="Helper" expanded="True" />
                   <Node name="Views" expanded="True">
-                    <Node name="City" expanded="True">
-                      <Node name="Index.cshtml" selected="True" />
-                    </Node>
+                    <Node name="City" expanded="True" />
+                    <Node name="Country" expanded="True" />
                     <Node name="Shared" expanded="True" />
                   </Node>
                 </Node>
               </Node>
               <Node name="DAL" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="ViewModel" expanded="True">
-                <Node name="CountryVM" expanded="True" />
+                <Node name="CityVM" expanded="True" />
               </Node>
               <Node name="Views" expanded="True">
                 <Node name="Basket" expanded="True" />

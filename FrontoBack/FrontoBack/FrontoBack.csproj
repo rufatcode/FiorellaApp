@@ -47,6 +47,8 @@
     <None Remove="Areas\AdminArea\Views\Country\" />
     <None Remove="Areas\AdminArea\Views\City\" />
     <None Remove="ViewModel\CityVM\" />
+    <None Remove="Areas\AdminArea\Views\Street\" />
+    <None Remove="ViewModel\StreetVM\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -91,6 +93,8 @@
     <Folder Include="Areas\AdminArea\Views\Country\" />
     <Folder Include="Areas\AdminArea\Views\City\" />
     <Folder Include="ViewModel\CityVM\" />
+    <Folder Include="Areas\AdminArea\Views\Street\" />
+    <Folder Include="ViewModel\StreetVM\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />

@@ -1,14 +1,12 @@
 ﻿@{
     ViewBag.Title = "Detail";
 }
-@model City;
-
-
+@model DetailAuthorVM
 
 <div class="col-lg-12 grid-margin stretch-card ">
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">City Table</h4>
+            <h4 class="card-title">Author Table</h4>
             <p class="card-description">
                 Add class <code>.table</code>
             </p>
@@ -17,24 +15,26 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Population</th>
-                            <th>Country</th>
-                            <th>Streets</th>
+                            <th>Age</th>
+                            <th>Location</th>
+                            <th>Books</th>
+                            <th>Settings</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>@Model.Name</td>
-                            <td>@Model.Population</td>
-                            <td><a asp-controller="Country" asp-action="Detail" asp-route-id="@Model.Country.Id">@Model.Country.Name</a></td>
+                            <td>@Model.Age</td>
+                            <td>@Model.Street.Name,@Model.Street.City.Name,@Model.Street.City.Country.Name</td>
                             <td>
                                 <ul>
-                                    @foreach (var street in Model.Streets)
+                                    @foreach (var book in Model.BookAuthors)
                                     {
-                                        <li style="list-style:none;">@street.Name</li>
+                                        <li style="list-style:none;" class="text-primary">@book.Book.Name</li>
                                     }
                                 </ul>
                             </td>
+                           
                         </tr>
 
 
@@ -44,3 +44,4 @@
         </div>
     </div>
 </div>
+

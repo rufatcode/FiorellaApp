@@ -115,7 +115,7 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             {
                 return BadRequest();
             }
-            City existCity = await _context.Cities.AsNoTracking().Include(c=>c.Country).FirstOrDefaultAsync(c => c.Id == id);
+            City existCity = await _context.Cities.AsNoTracking().Include(c=>c.Country).Include(c=>c.Streets).FirstOrDefaultAsync(c => c.Id == id);
             if (existCity==null)
             {
                 return NotFound();

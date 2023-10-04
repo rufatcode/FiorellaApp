@@ -1,14 +1,14 @@
 ﻿@{
     ViewBag.Title = "Detail";
 }
-@model City;
 
-
+@model DetailStreetVM
 
 <div class="col-lg-12 grid-margin stretch-card ">
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">City Table</h4>
+            <a asp-action="Create" class="btn btn-outline-success my-3">Create Street</a>
+            <h4 class="card-title">Street Table</h4>
             <p class="card-description">
                 Add class <code>.table</code>
             </p>
@@ -17,24 +17,16 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Population</th>
+                            <th>City</th>
                             <th>Country</th>
-                            <th>Streets</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>@Model.Name</td>
-                            <td>@Model.Population</td>
-                            <td><a asp-controller="Country" asp-action="Detail" asp-route-id="@Model.Country.Id">@Model.Country.Name</a></td>
-                            <td>
-                                <ul>
-                                    @foreach (var street in Model.Streets)
-                                    {
-                                        <li style="list-style:none;">@street.Name</li>
-                                    }
-                                </ul>
-                            </td>
+                            <td><a asp-controller="City" asp-action="Detail" asp-route-id="@Model.City.Id">@Model.City.Name</a></td>
+                            <td><a asp-controller="Country" asp-action="Detail" asp-route-id="@Model.City.Country.Id">@Model.City.Country.Name</a></td>
+
                         </tr>
 
 
