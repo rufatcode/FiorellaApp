@@ -17,6 +17,7 @@ if (!app.Environment.IsDevelopment())
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
+app.UseAuthentication();
 app.MapControllerRoute(
     name: "Areas",
     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
@@ -27,6 +28,7 @@ app.MapControllerRoute(
     );
 
 app.MapRazorPages();
+
 
 app.Run();
 

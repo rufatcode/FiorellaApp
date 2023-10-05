@@ -1,36 +1,26 @@
 ﻿<Properties StartupConfiguration="{93D03148-B11C-40C6-8D8D-78DB715165B7}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FrontoBack/Areas/AdminArea/Controllers/BookController.cs">
-    <Files>
-      <File FileName="FrontoBack/Areas/AdminArea/Controllers/BookController.cs" Line="70" Column="14" />
-      <File FileName="FrontoBack/Models/Book.cs" Line="21" Column="1" />
-      <File FileName="FrontoBack/ViewModel/BookVM/CreateBookVM.cs" Line="11" Column="42" />
-      <File FileName="FrontoBack/Areas/AdminArea/Views/Book/Create.cshtml" Line="14" Column="83" />
-      <File FileName="FrontoBack/Models/Author.cs" Line="20" Column="1" />
-      <File FileName="FrontoBack/Areas/AdminArea/Helper/FileExtention.cs" Line="13" Column="1" />
-      <File FileName="FrontoBack/DAL/AppDbContext.cs" Line="1" Column="1" />
-    </Files>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FrontoBack" expanded="True">
             <Node name="FrontoBack">
-              <Node name="Areas" expanded="True">
-                <Node name="AdminArea" expanded="True">
-                  <Node name="Controllers" expanded="True">
-                    <Node name="BookController.cs" selected="True" />
-                  </Node>
-                  <Node name="Helper" expanded="True" />
-                  <Node name="Views" expanded="True">
-                    <Node name="Book" expanded="True" />
-                    <Node name="Ganre" expanded="True" />
-                    <Node name="Shared" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="ViewModel" expanded="True">
+                <Node name="AccountVM" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Account" expanded="True">
+                  <Node name="Login.cshtml" selected="True" />
+                </Node>
+                <Node name="Shared" expanded="True">
+                  <Node name="Components" expanded="True">
+                    <Node name="Header" expanded="True" />
                   </Node>
                 </Node>
-              </Node>
-              <Node name="DAL" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="ViewModel" expanded="True">
-                <Node name="BookVM" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True" />
             </Node>
@@ -39,12 +29,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
   <AuthorInfo Name="rufat" Email="rufatri@code.edu.az" Copyright="" Company="" Trademark="" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.FrontoBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.FrontoBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

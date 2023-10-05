@@ -131,6 +131,18 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a>@User.Identity.Name</a>
+                                    <a asp-controller="Account" asp-action="Logout">Log out</a>
+                                }
+                                @if (!User.Identity.IsAuthenticated)
+                                {
+                                    <a asp-controller="Account" asp-action="Login">Login</a>
+                                }
+
+                            </li>
                             <li class="nav-item my-auto search">
                                 <i class="fas fa-search" id="search"></i>
                                 <ul class="list-unstyled py-3">

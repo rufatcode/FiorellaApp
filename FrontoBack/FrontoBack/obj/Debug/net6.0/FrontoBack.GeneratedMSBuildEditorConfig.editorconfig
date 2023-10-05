@@ -248,6 +248,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3JkaW9uL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Views/Basket/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmFza2V0L0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

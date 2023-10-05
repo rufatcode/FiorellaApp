@@ -1,10 +1,11 @@
 ﻿using System;
 using FrontoBack.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FrontoBack.DAL
 {
-	public class AppDbContext:DbContext
+	public class AppDbContext:IdentityDbContext<AppUser>
 	{
 		public DbSet<Slider> Sliders { get; set; }
 		public DbSet<SliderContent> SliderContents { get; set; }

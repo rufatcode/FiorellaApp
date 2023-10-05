@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "dYBp3FWT3IYRpVI3A87GWsf8P5B9VFlpEjGN4CvvjhB+hlzovLKjcl3rgk1ANZ5iliPgeQAsoG0sklI0IfoFuA==",
+  "dgSpecHash": "29+ZEiB3OJiDjOJlZjP0bIaIwe8iPOVksTMvTXMUMwaM2S7XEzTFrz+W8oAaVmcKVdHAzg5KCDtpILCR1pdiZw==",
   "success": true,
   "projectFilePath": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/FrontoBack.csproj",
   "expectedPackageFiles": [
     "/Users/rufat/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/Users/rufat/.nuget/packages/microsoft.aspnetcore.cryptography.internal/6.0.0/microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
+    "/Users/rufat/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/6.0.0/microsoft.aspnetcore.cryptography.keyderivation.6.0.0.nupkg.sha512",
+    "/Users/rufat/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/6.0.0/microsoft.aspnetcore.identity.entityframeworkcore.6.0.0.nupkg.sha512",
     "/Users/rufat/.nuget/packages/microsoft.aspnetcore.jsonpatch/6.0.0/microsoft.aspnetcore.jsonpatch.6.0.0.nupkg.sha512",
     "/Users/rufat/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/6.0.0/microsoft.aspnetcore.mvc.newtonsoftjson.6.0.0.nupkg.sha512",
     "/Users/rufat/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
@@ -22,6 +25,8 @@
     "/Users/rufat/.nuget/packages/microsoft.extensions.configuration.abstractions/6.0.0/microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "/Users/rufat/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.0/microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "/Users/rufat/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/rufat/.nuget/packages/microsoft.extensions.identity.core/6.0.0/microsoft.extensions.identity.core.6.0.0.nupkg.sha512",
+    "/Users/rufat/.nuget/packages/microsoft.extensions.identity.stores/6.0.0/microsoft.extensions.identity.stores.6.0.0.nupkg.sha512",
     "/Users/rufat/.nuget/packages/microsoft.extensions.logging/6.0.0/microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "/Users/rufat/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "/Users/rufat/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",

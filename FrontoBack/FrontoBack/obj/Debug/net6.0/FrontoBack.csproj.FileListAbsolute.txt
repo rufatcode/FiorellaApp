@@ -66,3 +66,4 @@
 /Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/bin/Debug/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 /Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/bin/Debug/net6.0/Newtonsoft.Json.dll
 /Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/bin/Debug/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
