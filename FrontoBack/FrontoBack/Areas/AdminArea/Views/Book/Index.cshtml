@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model List<Book>
+
+<div class="col-lg-12 grid-margin stretch-card ">
+    <div class="card">
+        <div class="card-body">
+            <a asp-action="Create" class="btn btn-outline-success my-3">Create Book</a>
+            <h4 class="card-title">Book Table</h4>
+            <p class="card-description">
+                Add class <code>.table</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Page Count</th>
+                            <th>Ganre</th>
+                            <th>Author</th>
+                            <th>Settings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var book in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <img width="150" height="100" src="~/img/@(@book.BookImages.FirstOrDefault()!=null?@book.BookImages.FirstOrDefault().ImgSrc:"")" />
+                                </td>
+                                <td>@book.Name</td>
+                                <td>$@book.Price</td>
+                                <td>@book.PageCount</td>
+                                <td>@(@book.BookGanres.FirstOrDefault()!=null? @book.BookGanres.FirstOrDefault().Ganre.Name:"")</td>
+                                <td>@(@book.BookAuthors.FirstOrDefault()!=null? @book.BookAuthors.FirstOrDefault().Author.Name:"")</td>
+                                <td>
+                                    <a asp-action="Delete" asp-route-id="@book.Id"><i class="mdi mdi-delete btn btn-outline-danger "> </i></a>
+                                    <a asp-action="Update" asp-route-id="@book.Id"><i class="mdi mdi-table-edit btn btn-outline-warning"> </i></a>
+                                    <a asp-action="Detail" asp-route-id="@book.Id"> <i class="mdi mdi-account-card-details btn btn-outline-primary"> </i></a>
+                                </td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

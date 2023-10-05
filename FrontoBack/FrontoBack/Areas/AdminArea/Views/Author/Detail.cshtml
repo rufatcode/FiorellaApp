@@ -30,7 +30,9 @@
                                 <ul>
                                     @foreach (var book in Model.BookAuthors)
                                     {
-                                        <li style="list-style:none;" class="text-primary">@book.Book.Name</li>
+                                        <li style="list-style:none;" class="text-primary">
+                                            <a asp-controller="Book" asp-action="Detail" asp-route-id="@book.BookId" style="text-decoration:none;color:darkgreen;">@book.Book.Name</a>
+                                        </li>
                                     }
                                 </ul>
                             </td>

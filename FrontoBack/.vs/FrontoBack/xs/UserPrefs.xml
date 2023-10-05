@@ -1,30 +1,28 @@
 ﻿<Properties StartupConfiguration="{93D03148-B11C-40C6-8D8D-78DB715165B7}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.FrontoBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FrontoBack/Areas/AdminArea/Controllers/CityController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FrontoBack/Areas/AdminArea/Controllers/BookController.cs">
     <Files>
-      <File FileName="FrontoBack/Areas/AdminArea/Controllers/CityController.cs" Line="118" Column="108" />
-      <File FileName="FrontoBack/Areas/AdminArea/Views/City/Create.cshtml" Line="34" Column="19" />
-      <File FileName="FrontoBack/Areas/AdminArea/Views/Country/Create.cshtml" Line="26" Column="19" />
-      <File FileName="FrontoBack/Areas/AdminArea/Views/City/Detail.cshtml" Line="34" Column="77" />
-      <File FileName="FrontoBack/Areas/AdminArea/Views/Country/Detail.cshtml" Line="5" Column="1" />
+      <File FileName="FrontoBack/Areas/AdminArea/Controllers/BookController.cs" Line="70" Column="14" />
+      <File FileName="FrontoBack/Models/Book.cs" Line="21" Column="1" />
+      <File FileName="FrontoBack/ViewModel/BookVM/CreateBookVM.cs" Line="11" Column="42" />
+      <File FileName="FrontoBack/Areas/AdminArea/Views/Book/Create.cshtml" Line="14" Column="83" />
+      <File FileName="FrontoBack/Models/Author.cs" Line="20" Column="1" />
+      <File FileName="FrontoBack/Areas/AdminArea/Helper/FileExtention.cs" Line="13" Column="1" />
+      <File FileName="FrontoBack/DAL/AppDbContext.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FrontoBack" expanded="True">
-            <Node name="FrontoBack" expanded="True">
+            <Node name="FrontoBack">
               <Node name="Areas" expanded="True">
                 <Node name="AdminArea" expanded="True">
-                  <Node name="Controllers" expanded="True" />
+                  <Node name="Controllers" expanded="True">
+                    <Node name="BookController.cs" selected="True" />
+                  </Node>
+                  <Node name="Helper" expanded="True" />
                   <Node name="Views" expanded="True">
-                    <Node name="City" expanded="True" />
-                    <Node name="Country" expanded="True" />
+                    <Node name="Book" expanded="True" />
+                    <Node name="Ganre" expanded="True" />
                     <Node name="Shared" expanded="True" />
                   </Node>
                 </Node>
@@ -32,22 +30,21 @@
               <Node name="DAL" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="ViewModel" expanded="True">
-                <Node name="CityVM" expanded="True" />
+                <Node name="BookVM" expanded="True" />
               </Node>
-              <Node name="Views" expanded="True">
-                <Node name="Basket" expanded="True" />
-                <Node name="Product" expanded="True" />
-                <Node name="Shared" expanded="True">
-                  <Node name="Components" expanded="True">
-                    <Node name="Product" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
+              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <AuthorInfo Name="rufat" Email="rufatri@code.edu.az" Copyright="" Company="" Trademark="" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.FrontoBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

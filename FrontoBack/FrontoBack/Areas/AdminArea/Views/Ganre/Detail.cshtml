@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Detail";
+}
+@model DetailGanreVM
+
+<div class="col-lg-12 grid-margin stretch-card ">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Ganre Table</h4>
+            <p class="card-description">
+                Add class <code>.table</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Book</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Model.Name</td>
+                            <td>
+                                <ul>
+                                    @foreach (var book in Model.BookGanres)
+                                    {
+                                            <li class="text-warning" style="list-style:none;">
+                                                <a asp-controller="Book" asp-action="Detail" asp-route-id="@book.BookId"  style="text-decoration:none;color:darkgreen;">@book.Book.Name</a>
+                                            </li>
+                                    }
+                                </ul>
+                              
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+

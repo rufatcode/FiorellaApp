@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Create";
+}
+
+@model CreateBookVM
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Book form</h4>
+            <p class="card-description">
+                Basic form layout
+            </p>
+            <form method="post" class="forms-sample" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Images"></label>
+                    <input asp-for="Images" class="form-control" id="BookImages" placeholder="Book Images" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Images"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" id="BookName" placeholder="Book Name" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price"></label>
+                    <input asp-for="Price" class="form-control" id="BookPrice" placeholder="Book Price" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Price"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PageCount"></label>
+                    <input asp-for="PageCount" class="form-control" id="BookPageCount" placeholder="Book Page Count" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="PageCount"></span>
+                </div>
+                <div class="form-group">
+                    <label class="d-block">Authors</label>
+                    <select asp-for="AuthorIds" asp-items="@ViewBag.Authors"></select>
+                    <span class="text-danger" asp-validation-for="AuthorIds"></span>
+                </div>
+                <div class="form-group">
+                    <label class="d-block">Ganres</label>
+                    <select asp-for="GanreIds" asp-items="@ViewBag.Ganres"></select>
+                    <span class="text-danger" asp-validation-for="GanreIds"></span>
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <a asp-action="Index" class="btn btn-light">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section CostumScripts{
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}
+

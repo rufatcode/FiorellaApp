@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Detail";
+}
+@model DetailBookVM
+
+<div class="col-lg-12 grid-margin stretch-card ">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Book Table</h4>
+            <p class="card-description">
+                Add class <code>.table</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Imagees</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Page Count</th>
+                            <th>Ganres</th>
+                            <th>Authors</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                @foreach (var image in Model.BookImages)
+                                {
+                                    <img width="150" height="100" src="~/img/@image.ImgSrc" />
+                                }
+
+                            </td>
+                            <td>@Model.Name</td>
+                            <td>$@Model.Price</td>
+                            <td>@Model.PageCount</td>
+                            <td>
+                                <ul>
+                                    @foreach (var ganre in Model.BookGanres)
+                                    {
+                                        <li style="list-style:none;" >
+                                            <a style="text-decoration:none;color:orange;" asp-controller="Ganre" asp-action="Detail" asp-route-id="@ganre.GanreId">@ganre.Ganre.Name</a>
+                                        </li>
+                                    }
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    @foreach (var author in Model.BookAuthors)
+                                    {
+                                        <li  style="list-style:none;" >
+                                            <a style="text-decoration:none;color:darkgreen;" asp-controller="Author" asp-action="Detail" asp-route-id="@author.AuthorId">@author.Author.Name</a>
+                                        </li>
+                                    }
+                                </ul>
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

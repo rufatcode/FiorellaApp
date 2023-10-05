@@ -8,7 +8,7 @@ namespace FrontoBack.ViewModel.BookVM
 		public int PageCount { get; set; }
 		public List<int> AuthorIds { get; set; }
 		public List<int> GanreIds { get; set; }
-		public IFormFile[] Images;
+		public IFormFile[] Images { get; set; }
 		public CreateBookVM()
 		{
 			AuthorIds = new();
