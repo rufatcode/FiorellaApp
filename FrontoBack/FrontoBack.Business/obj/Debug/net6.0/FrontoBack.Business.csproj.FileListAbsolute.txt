@@ -1,0 +1,5 @@
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/obj/Debug/net6.0/FrontoBack.Business.csproj.AssemblyReference.cache
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/obj/Debug/net6.0/FrontoBack.Business.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/obj/Debug/net6.0/FrontoBack.Business.AssemblyInfoInputs.cache
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/obj/Debug/net6.0/FrontoBack.Business.AssemblyInfo.cs
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/obj/Debug/net6.0/FrontoBack.Business.csproj.CoreCompileInputs.cache

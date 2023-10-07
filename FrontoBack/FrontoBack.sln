@@ -5,6 +5,12 @@ VisualStudioVersion = 25.0.1706.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontoBack", "FrontoBack\FrontoBack.csproj", "{93D03148-B11C-40C6-8D8D-78DB715165B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontoBack.Core", "FrontoBack.Core\FrontoBack.Core.csproj", "{54AB5F5E-A8E4-4D81-BA02-EFB94E728C81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontoBack.Data", "FrontoBack.Data\FrontoBack.Data.csproj", "{80F8C6CC-7E4C-4520-9EEF-553A94A381AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontoBack.Business", "FrontoBack.Business\FrontoBack.Business.csproj", "{7F010E14-2846-4B3F-BAA2-8B3F9FC81CAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{93D03148-B11C-40C6-8D8D-78DB715165B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93D03148-B11C-40C6-8D8D-78DB715165B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93D03148-B11C-40C6-8D8D-78DB715165B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54AB5F5E-A8E4-4D81-BA02-EFB94E728C81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54AB5F5E-A8E4-4D81-BA02-EFB94E728C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54AB5F5E-A8E4-4D81-BA02-EFB94E728C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54AB5F5E-A8E4-4D81-BA02-EFB94E728C81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80F8C6CC-7E4C-4520-9EEF-553A94A381AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80F8C6CC-7E4C-4520-9EEF-553A94A381AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80F8C6CC-7E4C-4520-9EEF-553A94A381AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80F8C6CC-7E4C-4520-9EEF-553A94A381AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F010E14-2846-4B3F-BAA2-8B3F9FC81CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F010E14-2846-4B3F-BAA2-8B3F9FC81CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F010E14-2846-4B3F-BAA2-8B3F9FC81CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F010E14-2846-4B3F-BAA2-8B3F9FC81CAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

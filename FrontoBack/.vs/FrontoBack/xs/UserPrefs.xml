@@ -1,21 +1,21 @@
 ﻿<Properties StartupConfiguration="{93D03148-B11C-40C6-8D8D-78DB715165B7}|Default">
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.FrontoBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.FrontoBack.Core FirstBuild="True" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="FrontoBack/ServiceRegistration.cs">
+    <Files>
+      <File FileName="FrontoBack/DAL/AppDbContext.cs" Line="1" Column="1" />
+      <File FileName="FrontoBack/ServiceRegistration.cs" Line="21" Column="11" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="FrontoBack" expanded="True">
+          <Node name="FrontoBack">
             <Node name="FrontoBack">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="ViewModel" expanded="True">
-                <Node name="AccountVM" expanded="True" />
-              </Node>
+              <Node name="DAL" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Account" expanded="True">
-                  <Node name="Login.cshtml" selected="True" />
-                </Node>
+                <Node name="Account" expanded="True" />
                 <Node name="Shared" expanded="True">
                   <Node name="Components" expanded="True">
                     <Node name="Header" expanded="True" />
@@ -23,16 +23,16 @@
                 </Node>
               </Node>
               <Node name="wwwroot" expanded="True" />
+              <Node name="ServiceRegistration.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <AuthorInfo Name="rufat" Email="rufatri@code.edu.az" Copyright="" Company="" Trademark="" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.FrontoBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.FrontoBack.Data FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.FrontoBack.Business FirstBuild="True" />
 </Properties>

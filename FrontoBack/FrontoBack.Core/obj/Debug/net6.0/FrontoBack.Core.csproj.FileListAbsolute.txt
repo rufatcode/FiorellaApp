@@ -1,0 +1,14 @@
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Core/obj/Debug/net6.0/FrontoBack.Core.csproj.AssemblyReference.cache
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Core/obj/Debug/net6.0/FrontoBack.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Core/obj/Debug/net6.0/FrontoBack.Core.AssemblyInfoInputs.cache
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Core/obj/Debug/net6.0/FrontoBack.Core.AssemblyInfo.cs
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Core/obj/Debug/net6.0/FrontoBack.Core.csproj.CoreCompileInputs.cache
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Core/bin/Debug/net6.0/FrontoBack.Core.deps.json
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Core/bin/Debug/net6.0/FrontoBack.Core.runtimeconfig.json
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Core/bin/Debug/net6.0/FrontoBack.Core.dll
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Core/bin/Debug/net6.0/FrontoBack.Core.pdb
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Core/obj/Debug/net6.0/FrontoBack.Core.dll
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Core/obj/Debug/net6.0/refint/FrontoBack.Core.dll
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Core/obj/Debug/net6.0/FrontoBack.Core.pdb
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Core/obj/Debug/net6.0/FrontoBack.Core.genruntimeconfig.cache
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Core/obj/Debug/net6.0/ref/FrontoBack.Core.dll
