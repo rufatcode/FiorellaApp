@@ -90,7 +90,6 @@ namespace FrontoBack.Controllers
             Check check = new();
             AppUser appUser = _userManager.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
             check.SaleTime = DateTime.Now;
-            check.Total = productInBaskets.Sum(p => p.Price * p.ProductCount);
             check.UserId = appUser.Id;
             _context.Checks.Add(check);
             TempData["SuccessMessage"] = $"Payment successfully complated Payent ammount:{productInBaskets.Sum(p=>p.Price*p.ProductCount)}$";
