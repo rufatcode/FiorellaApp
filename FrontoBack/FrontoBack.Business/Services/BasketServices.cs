@@ -4,7 +4,7 @@ using FrontoBack.DAL;
 using FrontoBack.Models;
 using FrontoBack.ViewModel;
 using Newtonsoft.Json;
-
+using Microsoft.AspNetCore.Http;
 namespace FrontoBack.Services
 {
 	public class BasketServices:IBasketServices
@@ -16,6 +16,7 @@ namespace FrontoBack.Services
             _httpContextAccessor = httpContextAccessor;
             _context = context;
         }
+        
         public void Add(int id)
         {
             List<ProductToBasket> products = new();
@@ -41,7 +42,7 @@ namespace FrontoBack.Services
         }
         public void Decrease(int id, string data)
         {
-            List<ProductToBasket> productToBaskets = JsonContent.DeserializeObject<List<ProductToBasket>>(data);
+            List<ProductToBasket> productToBaskets = JsonConvert.DeserializeObject<List<ProductToBasket>>(data);
             if (productToBaskets.Find(p => p.Id == id).ProductCount == 1)
             {
                 Remove(id, data);
@@ -71,6 +72,10 @@ namespace FrontoBack.Services
             List<BasketVM> basketVM = new();
             List<ProductToBasket> productToBaskets = new();
             string data = _httpContextAccessor.HttpContext.Request.Cookies["Basket"];
+            if (data==null)
+            {
+                return basketVM;
+            }
             productToBaskets = JsonConvert.DeserializeObject<List<ProductToBasket>>(data);
             foreach (var item in productToBaskets)
             {

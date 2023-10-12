@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model List<IdentityRole>;
+<div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <a asp-action="Create" class="my-3 btn btn-outline-primary">Create Roles</a>
+            <h4 class="card-title">Roles Table</h4>
+            <p class="card-description">
+                Add class <code>.table</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Settings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var role in Model)
+                        {
+                            <tr>
+                                <td>@role.Name</td>
+                                <td>
+                                    @if (role.Name == "Admin" || role.Name == "SupperAdmin"||role.Name=="User")
+                                    {
+                                        <a asp-action="Detail" asp-route-id="@role.Id"> <i class="mdi mdi-account-card-details btn btn-outline-primary"> </i></a>
+                                    }
+                                    else {
+                                        <a asp-action="Delete" asp-route-id="@role.Id"><i class="mdi mdi-delete btn btn-outline-danger "> </i></a>
+                                        <a asp-action="Update" asp-route-id="@role.Id"><i class="mdi mdi-table-edit btn btn-outline-warning"> </i></a>
+                                        <a asp-action="Detail" asp-route-id="@role.Id"> <i class="mdi mdi-account-card-details btn btn-outline-primary"> </i></a>
+                                    }
+
+                                </td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using FrontoBack.Areas.AdminArea.Helper;
@@ -7,6 +8,7 @@ using FrontoBack.Areas.AdminArea.ViewModel;
 using FrontoBack.Areas.AdminArea.ViewModel.ProductVM;
 using FrontoBack.DAL;
 using FrontoBack.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +17,7 @@ using Microsoft.EntityFrameworkCore;
 namespace FrontoBack.Areas.AdminArea.Controllers
 {
     [Area("AdminArea")]
+    [Authorize(Roles = "Admin,SupperAdmin")]
     public class ProductController : Controller
     {
         private readonly AppDbContext _context;
@@ -65,10 +68,11 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             {
                 createProductVM.Image.CopyTo(stream);
             }
-            _context.Products.Add(new Product { ImgSrc = fileName, Name = createProductVM.Name, Price = createProductVM.Price,CatagorieId=createProductVM.CatagoryId });
+            _context.Products.Add(new Product { ImgSrc = fileName, Name = createProductVM.Name, Price = createProductVM.Price,CatagorieId=createProductVM.CatagoryId,Count=createProductVM.Count });
             _context.SaveChanges();
             return RedirectToAction("Index", "Product");
         }
+        [Authorize(Roles = "SupperAdmin")]
         public IActionResult Delete(int? id)
         {
             if (id==null)
@@ -112,7 +116,7 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             }
             ViewBag.Catagories = _context.Catagories.ToList();
             ViewBag.Imgsrc = product.ImgSrc;
-            return View(new UpdateProductVM { Name=product.Name,Price=product.Price,CatagoryId=product.CatagorieId});
+            return View(new UpdateProductVM { Name=product.Name,Price=product.Price,CatagoryId=product.CatagorieId,Count=product.Count});
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]
@@ -125,31 +129,37 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             {
                 return View();
             }
-            else if (!updateProductVM.Image.IsImage())
+            else if (updateProductVM.Image!=null)
             {
-                ModelState.AddModelError("Image", "Only Image");
+                if (!updateProductVM.Image.IsImage())
+                {
+                    ModelState.AddModelError("Image", "Only Image");
+                }
+                else if (!updateProductVM.Image.IsLenghSuit(1000))
+                {
+                    return View();
+                }
+                string fileName = Guid.NewGuid().ToString() + updateProductVM.Image.FileName;
+                string path = Path.Combine(_webHostEnvironment.WebRootPath, "img", fileName);
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    updateProductVM.Image.CopyTo(stream);
+                }
+                System.IO.File.Delete(Path.Combine(_webHostEnvironment.WebRootPath, "img", existProduct.ImgSrc));
+                existProduct.ImgSrc = fileName;
             }
-            else if (!updateProductVM.Image.IsLenghSuit(1000))
-            {
-                return View();
-            }
+            
            
             if (_context.Products.Any(p=>p.Name.ToLower()==updateProductVM.Name.ToLower()&&updateProductVM.Name.ToLower()!=existProduct.Name.ToLower()))
             {
                 ModelState.AddModelError("Name","Name is exist");
                 return View();
             }
-            string fileName = Guid.NewGuid().ToString() + updateProductVM.Image.FileName;
-            string path = Path.Combine(_webHostEnvironment.WebRootPath, "img", fileName);
-            using(FileStream stream=new FileStream(path, FileMode.Create))
-            {
-                updateProductVM.Image.CopyTo(stream);
-            }
-            System.IO.File.Delete(Path.Combine(_webHostEnvironment.WebRootPath,"img", existProduct.ImgSrc));
-            existProduct.ImgSrc = fileName;
+          
             existProduct.Name = updateProductVM.Name;
             existProduct.Price = updateProductVM.Price;
             existProduct.CatagorieId = updateProductVM.CatagoryId;
+            existProduct.Count = updateProductVM.Count;
             _context.SaveChanges();
 
             return RedirectToAction("Index", "Product");

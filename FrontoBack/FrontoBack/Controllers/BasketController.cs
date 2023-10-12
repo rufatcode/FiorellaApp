@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using FrontoBack.DAL;
 using FrontoBack.Models;
 using FrontoBack.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FrontoBack.Controllers
 {
+    [Authorize]
     public class BasketController : Controller
     {
         private readonly AppDbContext _context;
@@ -24,11 +26,6 @@ namespace FrontoBack.Controllers
         
         public IActionResult Index()
         {
-            string data = Request.Cookies["Basket"];
-            if (data == null || data == "[]")
-            {
-                return RedirectToAction("Index","Product");
-            }
 
             return View(_basketServices.Show());
         }
@@ -93,6 +90,7 @@ namespace FrontoBack.Controllers
             _basketServices.Decrease(id, data);
             return RedirectToAction("Index");
         }
+
     }
 }
 

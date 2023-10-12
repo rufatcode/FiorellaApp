@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using FrontoBack.DAL;
 using FrontoBack.Models;
 using FrontoBack.ViewModel.CountryVM;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,6 +15,7 @@ using Microsoft.EntityFrameworkCore;
 namespace FrontoBack.Areas.AdminArea.Controllers
 {
     [Area("AdminArea")]
+    [Authorize(Roles = "Admin,SupperAdmin")]
     public class CountryController : Controller
     {
         private readonly AppDbContext _context;
@@ -46,6 +49,7 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index", "Country");
         }
+        [Authorize(Roles = "SupperAdmin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id==null)

@@ -561,12 +561,20 @@
       "PackagePath": "staticwebassets/img/3ddbad5f-1715-47e9-816e-d4b5ddf66d4fimages (8).jpeg"
     },
     {
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/5193133f-2308-4c48-8924-d6c477b94176first.jpeg",
+      "PackagePath": "staticwebassets/img/5193133f-2308-4c48-8924-d6c477b94176first.jpeg"
+    },
+    {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/5b0082aa-1c8a-42a9-a047-36d6545d1e73images (6).jpeg",
       "PackagePath": "staticwebassets/img/5b0082aa-1c8a-42a9-a047-36d6545d1e73images (6).jpeg"
     },
     {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/5ddd8df5-d91f-47bf-92fc-e41876ff6bd8images (8).jpeg",
       "PackagePath": "staticwebassets/img/5ddd8df5-d91f-47bf-92fc-e41876ff6bd8images (8).jpeg"
+    },
+    {
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/63c8132c-68e4-40a7-9881-bdbda6692b42eigths.jpeg",
+      "PackagePath": "staticwebassets/img/63c8132c-68e4-40a7-9881-bdbda6692b42eigths.jpeg"
     },
     {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/77a90e27-ccd0-49ae-8b86-672ab1b3506einstagram1.jpg",
@@ -583,6 +591,10 @@
     {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/7cf67ba9-a09e-4e5e-a356-e51617ab3450images (4).jpeg",
       "PackagePath": "staticwebassets/img/7cf67ba9-a09e-4e5e-a356-e51617ab3450images (4).jpeg"
+    },
+    {
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/7f610e37-55e1-45b4-828d-74f4415d4602third.jpeg",
+      "PackagePath": "staticwebassets/img/7f610e37-55e1-45b4-828d-74f4415d4602third.jpeg"
     },
     {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/839f426f-2cee-4daf-bbf6-930f857f8b22instagram2.jpg",
@@ -619,6 +631,14 @@
     {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/blog-feature-img-4.jpg",
       "PackagePath": "staticwebassets/img/blog-feature-img-4.jpg"
+    },
+    {
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/c22073a5-75dd-4540-a3c9-968b1fdab33cfifth.jpeg",
+      "PackagePath": "staticwebassets/img/c22073a5-75dd-4540-a3c9-968b1fdab33cfifth.jpeg"
+    },
+    {
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/c57ee7fd-7d1f-4720-abb6-68c19c25ff90sixth.jpeg",
+      "PackagePath": "staticwebassets/img/c57ee7fd-7d1f-4720-abb6-68c19c25ff90sixth.jpeg"
     },
     {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/cf892bf7-e5d4-4bf5-9126-6c241a330080images (5).jpeg",
@@ -737,10 +757,6 @@
       "PackagePath": "staticwebassets/img/shop-13-img.jpg"
     },
     {
-      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/shop-14-img.jpg",
-      "PackagePath": "staticwebassets/img/shop-14-img.jpg"
-    },
-    {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/shop-7-img.jpg",
       "PackagePath": "staticwebassets/img/shop-7-img.jpg"
     },
@@ -787,6 +803,10 @@
     {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/js/base.js",
       "PackagePath": "staticwebassets/js/base.js"
+    },
+    {
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/js/basket.js",
+      "PackagePath": "staticwebassets/js/basket.js"
     },
     {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/js/script.js",

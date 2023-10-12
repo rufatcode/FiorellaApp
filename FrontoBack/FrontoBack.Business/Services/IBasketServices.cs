@@ -1,4 +1,5 @@
 ﻿using System;
+using FrontoBack.Models;
 using FrontoBack.ViewModel;
 
 namespace FrontoBack.Services

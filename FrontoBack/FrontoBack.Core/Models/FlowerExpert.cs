@@ -1,12 +1,11 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using FrontoBack.Core.Models;
 
 namespace FrontoBack.Models
 {
-	public class FlowerExpert
+	public class FlowerExpert:BaseEntity
 	{
-		[Key]
-		public int Id { get; set; }
 		public string ImgSrc { get; set; }
 		public string Name { get; set; }
 		public string Position { get; set; }

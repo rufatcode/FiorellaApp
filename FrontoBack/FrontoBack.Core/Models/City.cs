@@ -1,13 +1,12 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using FrontoBack.Core.Models;
 
 namespace FrontoBack.Models
 {
-	public class City
+	public class City:BaseEntity
 	{
-		[Key]
-		public  int Id { get; set; }
 		public string Name { get; set; }
 		public int Population { get; set; }
 		[ForeignKey(nameof(Country))]

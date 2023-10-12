@@ -1,10 +1,11 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using FrontoBack.Core.Models;
 
 namespace FrontoBack.Models
 {
-	public class Author
+	public class Author:BaseEntity
 	{
         public string Name { get; set; }
 		public int Age { get; set; }

@@ -24,37 +24,53 @@
         margin: 6px 0px;
     }
 </style>
-<table class="table w-75 m-auto">
-    <thead>
-        <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Img Src</th>
-            <th scope="col">Product Count</th>
-            <th scope="col">Name</th>
-            <th scope="col">Price</th>
-            <th scope="col">Setting</th>
-        </tr>
-    </thead>
-    <tbody>
-
-        @foreach (var item in Model)
-        {
+<p id="SuccessMessage" class="text-danger w-50 text-center mx-auto">@TempData["SuccessMessage"]</p>
+@if (Model.Count != 0)
+{
+    <table class="table w-75 m-auto">
+        <thead>
             <tr>
-                <th scope="row">@item.Id</th>
-                <td><img width="50" height="50" src="~/img/@item.ImgSrc" /></td>
-                <td>@item.ProductCount</td>
-                <td>@item.Name</td>
-                <td>
-                    <a asp-controller="Basket" asp-action="IncreaseProduct" asp-route-id="@item.Id"><i class="fa-solid fa-plus describeIncon"></i></a>
-                    @item.Price
-                    <a asp-controller="Basket" asp-action="DecreaseProduct" asp-route-id="@item.Id"><i class="fa-solid fa-minus describeIncon"></i></a>
-                </td>
-                <td><a style="display:block;margin-top:25px; " asp-controller="Basket" asp-action="RemoveProduct" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i></a></td>
+                <th scope="col">Id</th>
+                <th scope="col">Img Src</th>
+                <th scope="col">Product Count</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Setting</th>
             </tr>
-        }
+        </thead>
+        <tbody>
+            <p id="AllertMessage" class="text-danger w-50 text-center mx-auto">@TempData["AlertMessage"]</p>
+            
 
-    </tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <td><img width="50" height="50" src="~/img/@item.ImgSrc" /></td>
+                    <td>@item.ProductCount</td>
+                    <td>@item.Name</td>
+                    <td>
+                        <a asp-controller="Basket" asp-action="IncreaseProduct" asp-route-id="@item.Id"><i class="fa-solid fa-plus describeIncon"></i></a>
+                        @item.Price
+                        <a asp-controller="Basket" asp-action="DecreaseProduct" asp-route-id="@item.Id"><i class="fa-solid fa-minus describeIncon"></i></a>
+                    </td>
+                    <td><a style="display:block;margin-top:25px; " asp-controller="Basket" asp-action="RemoveProduct" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i></a></td>
+                </tr>
+            }
 
-</table>
+        </tbody>
+
+    </table>
+    <div style="width:50%;text-align:center;">
+        <a asp-controller="CheckOut" asp-action="ConfirmBasket" style="color:wheat;display:inline-block;padding:5px 10px;text-decoration:none;background-color:orange;width:150px;border-radius:7px;">Confirm Basket @(Model.Sum(m=>m.Price*m.ProductCount))$</a>
+    </div>
+}
+
 <div class="w-75 m-auto text-center"><a style="display:block;text-decoration:none;color:red;margin:10px auto;" asp-controller="Product" asp-action="Index">Go To Home</a></div>
 
+
+</script>
+@section CostumScripts{
+    <script src="~/js/basket.js"></script>
+
+}

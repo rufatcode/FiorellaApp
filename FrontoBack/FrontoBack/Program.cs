@@ -1,4 +1,5 @@
 ﻿using FrontoBack;
+using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,8 +17,9 @@ if (!app.Environment.IsDevelopment())
 }
 app.UseStaticFiles();
 app.UseRouting();
-app.UseAuthorization();
+StripeConfiguration.ApiKey = config.GetSection("Stripe:Secret_key").Get<string>();
 app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllerRoute(
     name: "Areas",
     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"

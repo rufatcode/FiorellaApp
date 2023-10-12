@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Detail";
+}
+
+@model UserDetailVM
+<div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Users Detail Table</h4>
+            <p class="card-description">
+                Add class <code>.table</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>UserName</th>
+                            <th>FullName</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Roles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Model.UserName</td>
+                            <td>@Model.FullName</td>
+                            <td>@Model.Email</td>
+                            <td>@(Model.IsActive?"Active":"Blocked")</td>
+                            <td>
+                                <ul>
+                                    @foreach (var role in Model.Roles)
+                                    {
+                                        <li style="list-style:none;">@role</li>
+                                    }
+                                </ul>
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

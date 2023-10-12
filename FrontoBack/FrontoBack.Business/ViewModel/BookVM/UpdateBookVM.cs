@@ -1,4 +1,6 @@
 ﻿using System;
+using Microsoft.AspNetCore.Http;
+
 namespace FrontoBack.ViewModel.BookVM
 {
 	public class UpdateBookVM

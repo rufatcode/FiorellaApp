@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using FrontoBack.Areas.AdminArea.ViewModel;
 using FrontoBack.DAL;
 using FrontoBack.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -12,6 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace FrontoBack.Areas.AdminArea.Controllers
 {
     [Area("AdminArea")]
+    [Authorize(Roles = "Admin,SupperAdmin")]
     public class CatagoryController : Controller
     {
         private readonly AppDbContext _context;
@@ -36,6 +39,7 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             }
             return View(catagorie);
         }
+        [Authorize(Roles = "SupperAdmin")]
         public IActionResult Delete(int? id)
         {
             if (id==null)

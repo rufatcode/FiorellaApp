@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@model List<UserListVM>
+
+
+<div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Users Table</h4>
+            <p class="card-description">
+                Add class <code>.table</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>UserName</th>
+                            <th>Roles</th>
+                            <th>Settings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            <tr>
+                                <td>@user.UserName</td>
+                                <td>
+                                    <ul>
+                                @foreach (var role in user.Roles)
+                                    {
+                                        <li style="list-style:none;">@role</li>
+                                    }
+                                    </ul>
+                                </td>
+                                <td>
+                                    @if (user.Roles.Any(r => r == "SupperAdmin"))
+                                    {
+                                        <a asp-action="Detail" asp-route-id="@user.Id"> <i class="mdi mdi-account-card-details btn btn-outline-primary"> </i></a>
+                                    }
+                                    else if (user.Roles.Any(r => r == "Admin"))
+                                    {
+                                        <a asp-action="Update" asp-route-id="@user.Id"><i class="mdi mdi-table-edit btn btn-outline-warning"> </i></a>
+                                        <a asp-action="Detail" asp-route-id="@user.Id"> <i class="mdi mdi-account-card-details btn btn-outline-primary"> </i></a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-action="Delete" asp-route-id="@user.Id"><i class="mdi mdi-delete btn btn-outline-danger "> </i></a>
+                                        <a asp-action="Update" asp-route-id="@user.Id"><i class="mdi mdi-table-edit btn btn-outline-warning"> </i></a>
+                                        <a asp-action="Detail" asp-route-id="@user.Id"> <i class="mdi mdi-account-card-details btn btn-outline-primary"> </i></a>
+                                    }
+
+                                </td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

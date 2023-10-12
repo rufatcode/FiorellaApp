@@ -42,6 +42,7 @@ namespace FrontoBack.Controllers
             appUser.UserName = registerVM.UserName;
             appUser.FullName = registerVM.FullName;
             appUser.Email = registerVM.Email;
+            appUser.IsActive = true;
             IdentityResult result = await _userManager.CreateAsync(appUser,registerVM.Password);
             if (!result.Succeeded)
             {
@@ -51,6 +52,7 @@ namespace FrontoBack.Controllers
                 }
                 return View();
             }
+            await _userManager.AddToRoleAsync(appUser, "User");
             return RedirectToAction("Login","Account");
         }
         public async Task<IActionResult> Login()
@@ -59,13 +61,14 @@ namespace FrontoBack.Controllers
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> Login(LoginVM loginVM)
+        public async Task<IActionResult> Login(LoginVM loginVM,string? ReturnUrl)
         {
             if (!ModelState.IsValid)
             {
                 return View();
             }
             AppUser appUser =await _userManager.FindByNameAsync(loginVM.UserNameOrEmail);
+            
             if (appUser==null)
             {
                 appUser = await _userManager.FindByEmailAsync(loginVM.UserNameOrEmail);
@@ -75,13 +78,29 @@ namespace FrontoBack.Controllers
                     return View();
                 }
             }
-            var demo = await _signInManager.PasswordSignInAsync(appUser, loginVM.Password, loginVM.Remember, true);
-            if (!demo.Succeeded)
+            if (!appUser.IsActive)
+            {
+                ModelState.AddModelError("", "User is Blocked");
+                return View();
+            }
+            var resoult = await _signInManager.PasswordSignInAsync(appUser, loginVM.Password, loginVM.Remember, true);
+             if (resoult.IsLockedOut)
+            {
+                ModelState.AddModelError("", "User is blocked");
+                return View();
+            }
+            
+            else if (!resoult.Succeeded)
             {
                 ModelState.AddModelError("", "Something went wrong");
                 return View();
             }
+           
             await _signInManager.SignInAsync(appUser, loginVM.Remember);
+            if (ReturnUrl!=null)
+            {
+                return Redirect(ReturnUrl);
+            }
             return Redirect("/home/index");
         }
         

@@ -3,3 +3,17 @@
 /Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/obj/Debug/net6.0/FrontoBack.Business.AssemblyInfoInputs.cache
 /Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/obj/Debug/net6.0/FrontoBack.Business.AssemblyInfo.cs
 /Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/obj/Debug/net6.0/FrontoBack.Business.csproj.CoreCompileInputs.cache
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/bin/Debug/net6.0/FrontoBack.Business.deps.json
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/bin/Debug/net6.0/FrontoBack.Business.runtimeconfig.json
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/bin/Debug/net6.0/FrontoBack.Business.dll
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/bin/Debug/net6.0/FrontoBack.Business.pdb
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/bin/Debug/net6.0/FrontoBack.Core.dll
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/bin/Debug/net6.0/FrontoBack.Data.dll
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/bin/Debug/net6.0/FrontoBack.Data.pdb
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/bin/Debug/net6.0/FrontoBack.Core.pdb
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/obj/Debug/net6.0/FrontoBack.Business.csproj.CopyComplete
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/obj/Debug/net6.0/FrontoBack.Business.dll
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/obj/Debug/net6.0/refint/FrontoBack.Business.dll
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/obj/Debug/net6.0/FrontoBack.Business.pdb
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/obj/Debug/net6.0/FrontoBack.Business.genruntimeconfig.cache
+/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack.Business/obj/Debug/net6.0/ref/FrontoBack.Business.dll

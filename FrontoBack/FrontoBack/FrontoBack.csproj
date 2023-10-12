@@ -9,7 +9,6 @@
   <ItemGroup>
     <None Remove="Controllers\" />
     <None Remove="Views\" />
-    <None Remove="ViewModel\" />
     <None Remove="Views\Shared\" />
     <None Remove="Views\Home\" />
     <None Remove="Views\Accordion\" />
@@ -34,25 +33,16 @@
     <None Remove="Areas\AdminArea\Views\Book\" />
     <None Remove="Areas\AdminArea\Views\Ganre\" />
     <None Remove="Areas\AdminArea\Views\Author\" />
-    <None Remove="ViewModel\CatagoryVM\" />
-    <None Remove="ViewModel\ProductVM\" />
-    <None Remove="ViewModel\SliderVM\" />
-    <None Remove="ViewModel\BookVM\" />
-    <None Remove="ViewModel\AuthorVM\" />
-    <None Remove="ViewModel\GanreVM\" />
-    <None Remove="ViewModel\CountryVM\" />
     <None Remove="Areas\AdminArea\Views\Country\" />
     <None Remove="Areas\AdminArea\Views\City\" />
-    <None Remove="ViewModel\CityVM\" />
     <None Remove="Areas\AdminArea\Views\Street\" />
-    <None Remove="ViewModel\StreetVM\" />
     <None Remove="Views\Account\" />
-    <None Remove="ViewModel\AccountVM\" />
+    <None Remove="Areas\AdminArea\Views\Role\" />
+    <None Remove="Areas\AdminArea\Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Views\" />
-    <Folder Include="ViewModel\" />
     <Folder Include="Views\Shared\" />
     <Folder Include="Views\Home\" />
     <Folder Include="wwwroot\img\" />
@@ -79,20 +69,12 @@
     <Folder Include="Areas\AdminArea\Views\Book\" />
     <Folder Include="Areas\AdminArea\Views\Ganre\" />
     <Folder Include="Areas\AdminArea\Views\Author\" />
-    <Folder Include="ViewModel\CatagoryVM\" />
-    <Folder Include="ViewModel\ProductVM\" />
-    <Folder Include="ViewModel\SliderVM\" />
-    <Folder Include="ViewModel\BookVM\" />
-    <Folder Include="ViewModel\AuthorVM\" />
-    <Folder Include="ViewModel\GanreVM\" />
-    <Folder Include="ViewModel\CountryVM\" />
     <Folder Include="Areas\AdminArea\Views\Country\" />
     <Folder Include="Areas\AdminArea\Views\City\" />
-    <Folder Include="ViewModel\CityVM\" />
     <Folder Include="Areas\AdminArea\Views\Street\" />
-    <Folder Include="ViewModel\StreetVM\" />
     <Folder Include="Views\Account\" />
-    <Folder Include="ViewModel\AccountVM\" />
+    <Folder Include="Areas\AdminArea\Views\Role\" />
+    <Folder Include="Areas\AdminArea\Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
@@ -108,16 +90,18 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Stripe.net" Version="42.8.0" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\img\" />
     <Content Remove="wwwroot\admin\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FrontoBack.Business\FrontoBack.Business.csproj">
+    <ProjectReference Include="..\FrontoBack.Data\FrontoBack.Data.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="..\FrontoBack.Data\FrontoBack.Data.csproj">
+    <ProjectReference Include="..\FrontoBack.Business\FrontoBack.Business.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>

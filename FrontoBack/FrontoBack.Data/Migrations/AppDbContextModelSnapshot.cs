@@ -22,6 +22,57 @@ namespace FrontoBack.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("FrontoBack.Core.Models.Check", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("SaleTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double>("Total")
+                        .HasColumnType("float");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Checks");
+                });
+
+            modelBuilder.Entity("FrontoBack.Core.Models.CheckProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CheckId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("OldPrice")
+                        .HasColumnType("float");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CheckId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("CheckProducts");
+                });
+
             modelBuilder.Entity("FrontoBack.Models.Accordion", b =>
                 {
                     b.Property<int>("Id")
@@ -65,6 +116,9 @@ namespace FrontoBack.Migrations
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -110,6 +164,44 @@ namespace FrontoBack.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "72a44d7a-559e-4104-aee6-88a4ee0864db",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "f934da26-c67d-4356-b023-6b4bdba38862",
+                            Email = "rufatri@code.edu.az",
+                            EmailConfirmed = true,
+                            FullName = "RufatCode",
+                            IsActive = false,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "RUFATRI@CODE.EDU.AZ",
+                            NormalizedUserName = "RUFAT123",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPpI5GJHq/25DQkA9TGxzzJ1jqFM5R/4ifhF3mZmnuhzAWRbh/4OqdfrdN/Lt3yjqg==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "2ba9503f-8e9f-4ee6-9ade-31a39a27a854",
+                            TwoFactorEnabled = false,
+                            UserName = "Rufat123"
+                        },
+                        new
+                        {
+                            Id = "aa0947b4-ec35-475f-8d47-656921e00c7f",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "3f0ad74f-c32b-48c4-bb83-2e657612e243",
+                            Email = "rft.smayilov@mail.ru",
+                            EmailConfirmed = false,
+                            FullName = "RufatConputerScience",
+                            IsActive = false,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "RFT.SMAYILOV@MAIL.RU",
+                            NormalizedUserName = "RUFAT8899",
+                            PasswordHash = "AQAAAAEAACcQAAAAEB6ZRYQqYWPKouiJa7e1oWSEQluVJHYegkqWqqtHtaGAwQXVUXNBw8phf63sjZP9Mw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "989378a4-9c8c-45cf-b18a-23340fdf20a9",
+                            TwoFactorEnabled = false,
+                            UserName = "Rufat8899"
+                        });
                 });
 
             modelBuilder.Entity("FrontoBack.Models.Author", b =>
@@ -399,6 +491,9 @@ namespace FrontoBack.Migrations
                     b.Property<int>("CatagorieId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
                     b.Property<string>("ImgSrc")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -506,6 +601,29 @@ namespace FrontoBack.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "ac9fbf57-4e5c-431b-b5fa-f4ea68b6741e",
+                            ConcurrencyStamp = "ac9fbf57-4e5c-431b-b5fa-f4ea68b6741e",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "e9a4faee-dcdf-45a7-a2bd-c27c497842f2",
+                            ConcurrencyStamp = "e9a4faee-dcdf-45a7-a2bd-c27c497842f2",
+                            Name = "SupperAdmin",
+                            NormalizedName = "SUPPERADMIN"
+                        },
+                        new
+                        {
+                            Id = "727ef898-e71d-4f6c-b94d-e1e27083f8be",
+                            ConcurrencyStamp = "727ef898-e71d-4f6c-b94d-e1e27083f8be",
+                            Name = "User",
+                            NormalizedName = "USER"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -593,6 +711,18 @@ namespace FrontoBack.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "72a44d7a-559e-4104-aee6-88a4ee0864db",
+                            RoleId = "ac9fbf57-4e5c-431b-b5fa-f4ea68b6741e"
+                        },
+                        new
+                        {
+                            UserId = "aa0947b4-ec35-475f-8d47-656921e00c7f",
+                            RoleId = "e9a4faee-dcdf-45a7-a2bd-c27c497842f2"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -612,6 +742,36 @@ namespace FrontoBack.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("FrontoBack.Core.Models.Check", b =>
+                {
+                    b.HasOne("FrontoBack.Models.AppUser", "AppUser")
+                        .WithMany("Checkes")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("FrontoBack.Core.Models.CheckProduct", b =>
+                {
+                    b.HasOne("FrontoBack.Core.Models.Check", "Check")
+                        .WithMany("CheckProducts")
+                        .HasForeignKey("CheckId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FrontoBack.Models.Product", "Product")
+                        .WithMany("CheckProducts")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Check");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("FrontoBack.Models.Author", b =>
@@ -758,6 +918,16 @@ namespace FrontoBack.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("FrontoBack.Core.Models.Check", b =>
+                {
+                    b.Navigation("CheckProducts");
+                });
+
+            modelBuilder.Entity("FrontoBack.Models.AppUser", b =>
+                {
+                    b.Navigation("Checkes");
+                });
+
             modelBuilder.Entity("FrontoBack.Models.Author", b =>
                 {
                     b.Navigation("BookAuthors");
@@ -790,6 +960,11 @@ namespace FrontoBack.Migrations
             modelBuilder.Entity("FrontoBack.Models.Ganre", b =>
                 {
                     b.Navigation("BookGanres");
+                });
+
+            modelBuilder.Entity("FrontoBack.Models.Product", b =>
+                {
+                    b.Navigation("CheckProducts");
                 });
 
             modelBuilder.Entity("FrontoBack.Models.Street", b =>

@@ -1,12 +1,11 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using FrontoBack.Core.Models;
 
 namespace FrontoBack.Models
 {
-	public class Slider
+	public class Slider:BaseEntity
 	{
-		[Key]
-		public int Id { get; set; }
 		public string ImgSrc { get; set; }
 		public Slider()
 		{

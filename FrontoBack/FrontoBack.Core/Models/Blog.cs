@@ -2,13 +2,12 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations.Schema;
+using FrontoBack.Core.Models;
 
 namespace FrontoBack.Models
 {
-    public class Blog
+    public class Blog:BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
 		public string ImgSrc { get; set; }
         [Required, Column(TypeName = "Date"), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime Date { get; set; }

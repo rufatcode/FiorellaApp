@@ -18,7 +18,11 @@ namespace FrontoBack
 
             services.AddDbContext<AppDbContext>(option =>
 			{
-				option.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+				option.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
+					opt =>
+					
+						opt.MigrationsAssembly("FrontoBack.Data")
+					) ;
 				//service.UseSqlServer(configuration["ConnectionString:DefaultConnection"]);
 			});
 			services.AddSession(option =>

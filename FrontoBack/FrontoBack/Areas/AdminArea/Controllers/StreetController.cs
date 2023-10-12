@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using FrontoBack.DAL;
 using FrontoBack.Models;
 using FrontoBack.ViewModel.StreetVM;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +17,7 @@ using Microsoft.EntityFrameworkCore;
 namespace FrontoBack.Areas.AdminArea.Controllers
 {
     [Area("AdminArea")]
+    [Authorize(Roles = "Admin,SupperAdmin")]
     public class StreetController : Controller
     {
         // GET: /<controller>/
@@ -50,6 +53,7 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("Index", "Street");
         }
+        [Authorize(Roles = "SupperAdmin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id==null)

@@ -1,13 +1,12 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using FrontoBack.Core.Models;
 
 namespace FrontoBack.Models
 {
-	public class BookAuthor
+	public class BookAuthor:BaseEntity
 	{
-		[Key]
-		public int Id { get; set; }
 		public Book Book { get; set; }
 		public Author Author { get; set; }
 		[ForeignKey(nameof(Author))]

@@ -137,6 +137,10 @@
                                     <a>@User.Identity.Name</a>
                                     <a asp-controller="Account" asp-action="Logout">Log out</a>
                                 }
+                                @if (User.IsInRole("Admin") || User.IsInRole("SupperAdmin"))
+                                {
+                                        <a asp-area="AdminArea" asp-controller="Dashboard" asp-action="Index">Admin </a>
+                                }
                                 @if (!User.Identity.IsAuthenticated)
                                 {
                                     <a asp-controller="Account" asp-action="Login">Login</a>

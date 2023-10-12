@@ -9,6 +9,10 @@ namespace FrontoBack.Data.Implimentations
 	public class Repozitory<T>:IRepozitory<T> where T:class,IBaseEntity
 	{
         private readonly AppDbContext _context;
+        public Repozitory()
+        {
+
+        }
 		public Repozitory(AppDbContext context)
 		{
             _context = context;
@@ -29,11 +33,11 @@ namespace FrontoBack.Data.Implimentations
             }
         }
 
-        public bool  Delete(int id)
+        public async Task<bool>  Delete(int id)
         {
             try
             {
-                T entity = _context.Set<T>().FirstOrDefault(e => e.Id == id);
+                T entity =await _context.Set<T>().FirstOrDefaultAsync(e => e.Id == id);
                 _context.Set<T>().Remove(entity);
                 return true;
             }

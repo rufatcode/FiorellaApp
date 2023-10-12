@@ -1,9 +1,10 @@
 ﻿using System;
+using FrontoBack.Core.Models;
+
 namespace FrontoBack.Models
 {
-	public class ProductToBasket
+	public class ProductToBasket:BaseEntity
 	{
-		public int Id { get; set; }
 		public int ProductCount { get; set; }
 		public ProductToBasket()
 		{

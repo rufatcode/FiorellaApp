@@ -18,6 +18,7 @@
                         <th>Image</th>
                         <th>Name</th>
                         <th>Price</th>
+                        <th>Count</th>
                         <th>Catagory Name</th>
                         <th>Settings</th>
                     </tr>
@@ -31,6 +32,7 @@
                             </td>
                             <td>@product.Name</td>
                             <td>@product.Price</td>
+                            <td>@product.Count</td>
                             <td>@product.Catagories.Name</td>
                             <td>
                                 <a asp-action="Delete" asp-route-id="@product.Id"><i class="mdi mdi-delete btn btn-outline-danger "> </i></a>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "s0/1dahyTr8WHCx3rz+gVTctZiHPZuDu8EmvFoK71ic=",
+  "Hash": "1M82ITdmDfkPKgV8ar3vQw5xC6H4sT5wQPEZZxjlj3g=",
   "Source": "FrontoBack",
   "BasePath": "_content/FrontoBack",
   "Mode": "Default",
@@ -2414,6 +2414,23 @@
       "OriginalItemSpec": "wwwroot/img/3ddbad5f-1715-47e9-816e-d4b5ddf66d4fimages (8).jpeg"
     },
     {
+      "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/5193133f-2308-4c48-8924-d6c477b94176first.jpeg",
+      "SourceId": "FrontoBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/",
+      "BasePath": "_content/FrontoBack",
+      "RelativePath": "img/5193133f-2308-4c48-8924-d6c477b94176first.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/5193133f-2308-4c48-8924-d6c477b94176first.jpeg"
+    },
+    {
       "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/5b0082aa-1c8a-42a9-a047-36d6545d1e73images (6).jpeg",
       "SourceId": "FrontoBack",
       "SourceType": "Discovered",
@@ -2446,6 +2463,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/5ddd8df5-d91f-47bf-92fc-e41876ff6bd8images (8).jpeg"
+    },
+    {
+      "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/63c8132c-68e4-40a7-9881-bdbda6692b42eigths.jpeg",
+      "SourceId": "FrontoBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/",
+      "BasePath": "_content/FrontoBack",
+      "RelativePath": "img/63c8132c-68e4-40a7-9881-bdbda6692b42eigths.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/63c8132c-68e4-40a7-9881-bdbda6692b42eigths.jpeg"
     },
     {
       "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/77a90e27-ccd0-49ae-8b86-672ab1b3506einstagram1.jpg",
@@ -2514,6 +2548,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/7cf67ba9-a09e-4e5e-a356-e51617ab3450images (4).jpeg"
+    },
+    {
+      "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/7f610e37-55e1-45b4-828d-74f4415d4602third.jpeg",
+      "SourceId": "FrontoBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/",
+      "BasePath": "_content/FrontoBack",
+      "RelativePath": "img/7f610e37-55e1-45b4-828d-74f4415d4602third.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/7f610e37-55e1-45b4-828d-74f4415d4602third.jpeg"
     },
     {
       "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/839f426f-2cee-4daf-bbf6-930f857f8b22instagram2.jpg",
@@ -2667,6 +2718,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/blog-feature-img-4.jpg"
+    },
+    {
+      "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/c22073a5-75dd-4540-a3c9-968b1fdab33cfifth.jpeg",
+      "SourceId": "FrontoBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/",
+      "BasePath": "_content/FrontoBack",
+      "RelativePath": "img/c22073a5-75dd-4540-a3c9-968b1fdab33cfifth.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/c22073a5-75dd-4540-a3c9-968b1fdab33cfifth.jpeg"
+    },
+    {
+      "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/c57ee7fd-7d1f-4720-abb6-68c19c25ff90sixth.jpeg",
+      "SourceId": "FrontoBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/",
+      "BasePath": "_content/FrontoBack",
+      "RelativePath": "img/c57ee7fd-7d1f-4720-abb6-68c19c25ff90sixth.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/c57ee7fd-7d1f-4720-abb6-68c19c25ff90sixth.jpeg"
     },
     {
       "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/cf892bf7-e5d4-4bf5-9126-6c241a330080images (5).jpeg",
@@ -3162,23 +3247,6 @@
       "OriginalItemSpec": "wwwroot/img/shop-13-img.jpg"
     },
     {
-      "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/shop-14-img.jpg",
-      "SourceId": "FrontoBack",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/",
-      "BasePath": "_content/FrontoBack",
-      "RelativePath": "img/shop-14-img.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/img/shop-14-img.jpg"
-    },
-    {
       "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/img/shop-7-img.jpg",
       "SourceId": "FrontoBack",
       "SourceType": "Discovered",
@@ -3381,6 +3449,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/base.js"
+    },
+    {
+      "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/js/basket.js",
+      "SourceId": "FrontoBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/",
+      "BasePath": "_content/FrontoBack",
+      "RelativePath": "js/basket.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/basket.js"
     },
     {
       "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/js/script.js",

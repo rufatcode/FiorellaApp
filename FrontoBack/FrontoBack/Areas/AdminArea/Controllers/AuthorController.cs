@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using FrontoBack.DAL;
 using FrontoBack.Models;
 using FrontoBack.ViewModel.AuthorVM;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,7 @@ using Microsoft.EntityFrameworkCore;
 namespace FrontoBack.Areas.AdminArea.Controllers
 {
     [Area("AdminArea")]
+    [Authorize(Roles ="Admin,SupperAdmin")]
     public class AuthorController : Controller
     {
         // GET: /<controller>/
@@ -22,6 +24,7 @@ namespace FrontoBack.Areas.AdminArea.Controllers
         {
             _context = context;
         }
+        [AllowAnonymous]
         public IActionResult Index()
         {
 
@@ -50,6 +53,7 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("Index", "Author");
         }
+        [Authorize(Roles = "SupperAdmin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id==null)
