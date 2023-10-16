@@ -4,6 +4,8 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using FrontoBack.Business.Interfaces;
+using FrontoBack.Business.Services;
 using FrontoBack.DAL;
 using FrontoBack.Models;
 using FrontoBack.ViewModel.StreetVM;
@@ -22,13 +24,17 @@ namespace FrontoBack.Areas.AdminArea.Controllers
     {
         // GET: /<controller>/
         private readonly AppDbContext _context;
-        public StreetController(AppDbContext context)
+        private readonly IStreetService _streetService;
+        public StreetController(AppDbContext context,IStreetService streetService)
         {
             _context = context;
+            _streetService = streetService;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View(_context.Streets.AsNoTracking().Include(s=>s.City).ToList());
+            var data = await _streetService.GetAll();
+            int n = 9;
+            return View(await _streetService.GetAll());
         }
         public async Task<IActionResult> Create()
         {
@@ -44,13 +50,12 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             {
                 return View();
             }
-            else if (_context.Streets.Any(s=>s.Name.ToLower()==createStreetVM.Name.ToLower()))
+            var isCreated =await _streetService.Create(createStreetVM);
+             if (!isCreated)
             {
                 ModelState.AddModelError("Name", "Name must bu unique");
                 return View();
             }
-             _context.Streets.Add(new Street { Name = createStreetVM.Name, CityId = createStreetVM.CityId });
-            await _context.SaveChangesAsync();
             return RedirectToAction("Index", "Street");
         }
         [Authorize(Roles = "SupperAdmin")]
@@ -60,13 +65,11 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             {
                 return BadRequest();
             }
-            Street street = _context.Streets.FirstOrDefault(s => s.Id == id);
-            if (street==null)
+            var isDeleted =await _streetService.Delete(id);
+            if (isDeleted==false)
             {
-                return NotFound();
+                return BadRequest("Something went wrong");
             }
-            _context.Streets.Remove(street);
-            await _context.SaveChangesAsync();
             return RedirectToAction("Index", "Street");
         }
         public async Task<IActionResult> Update(int? id)
@@ -75,7 +78,7 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             {
                 return BadRequest();
             }
-            Street street = _context.Streets.Include(s=>s.City).FirstOrDefault(s => s.Id == id);
+            Street street =await _streetService.GetByIdIncludeCity(id);
             if (street==null)
             {
                 return NotFound();
@@ -90,14 +93,12 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             {
                 return View();
             }
-            Street street = _context.Streets.Include(s => s.City).FirstOrDefault(s => s.Id == id);
-            if (_context.Streets.Any(s => s.Name.ToLower() == updateStreetVM.Name.ToLower() && s.CityId == street.CityId&&updateStreetVM.Name!=street.Name))
+            var isModified =await  _streetService.Update(id, updateStreetVM);
+            if (!isModified)
             {
                 ModelState.AddModelError("Name", "Steet name must bu unique for every city");
                 return View();
             }
-            street.Name = updateStreetVM.Name;
-            await _context.SaveChangesAsync();
             return RedirectToAction("Index", "Street");
         }
         public async Task<IActionResult> Detail(int? id)
@@ -106,11 +107,7 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             {
                 return BadRequest();
             }
-            Street street = _context.Streets.Include(s=>s.City).ThenInclude(c=>c.Country).FirstOrDefault(s => s.Id == id);
-            if (street==null)
-            {
-                return NotFound();
-            }
+            Street street =await _streetService.GetByIdThenIncludeCountry(id);
 
             return View(new DetailStreetVM { Name=street.Name,City=street.City});
         }

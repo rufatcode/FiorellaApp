@@ -1,4 +1,6 @@
 ﻿using FrontoBack;
+using FrontoBack.DAL;
+using Microsoft.EntityFrameworkCore;
 using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,8 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
 builder.Services.Registration(config);
 builder.Services.AddRazorPages();
-
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();
+}
 app.UseSession();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -30,6 +36,7 @@ app.MapControllerRoute(
     );
 
 app.MapRazorPages();
+
 
 
 app.Run();

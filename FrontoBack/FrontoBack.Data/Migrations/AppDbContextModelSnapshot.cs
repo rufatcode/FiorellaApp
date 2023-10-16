@@ -33,7 +33,7 @@ namespace FrontoBack.Migrations
                     b.Property<DateTime>("SaleTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<double>("Total")
+                    b.Property<double>("TotalAmmount")
                         .HasColumnType("float");
 
                     b.Property<string>("UserId")
@@ -58,8 +58,11 @@ namespace FrontoBack.Migrations
                     b.Property<int>("CheckId")
                         .HasColumnType("int");
 
-                    b.Property<double>("OldPrice")
+                    b.Property<double>("Price")
                         .HasColumnType("float");
+
+                    b.Property<int>("ProductCount")
+                        .HasColumnType("int");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
@@ -168,9 +171,9 @@ namespace FrontoBack.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "72a44d7a-559e-4104-aee6-88a4ee0864db",
+                            Id = "0990b467-72dd-4f47-bad5-2fd5338bbf3f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f934da26-c67d-4356-b023-6b4bdba38862",
+                            ConcurrencyStamp = "631b5ab3-321f-413e-8819-775c4b1db3ee",
                             Email = "rufatri@code.edu.az",
                             EmailConfirmed = true,
                             FullName = "RufatCode",
@@ -178,17 +181,17 @@ namespace FrontoBack.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "RUFATRI@CODE.EDU.AZ",
                             NormalizedUserName = "RUFAT123",
-                            PasswordHash = "AQAAAAEAACcQAAAAEPpI5GJHq/25DQkA9TGxzzJ1jqFM5R/4ifhF3mZmnuhzAWRbh/4OqdfrdN/Lt3yjqg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEICRNQfwJ1aBQnyPGhIFgMxWT9irr1hDupnno2PE6M+zXMwifC4+0SvPkwt0IVPV7w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2ba9503f-8e9f-4ee6-9ade-31a39a27a854",
+                            SecurityStamp = "a3dfbce5-f7e9-458b-8683-326054e4ea4c",
                             TwoFactorEnabled = false,
                             UserName = "Rufat123"
                         },
                         new
                         {
-                            Id = "aa0947b4-ec35-475f-8d47-656921e00c7f",
+                            Id = "0f71cf6d-9b14-4c68-bb0e-b0fd04280c8f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "3f0ad74f-c32b-48c4-bb83-2e657612e243",
+                            ConcurrencyStamp = "6a607c16-44af-4f59-b89a-f07013703d03",
                             Email = "rft.smayilov@mail.ru",
                             EmailConfirmed = false,
                             FullName = "RufatConputerScience",
@@ -196,9 +199,9 @@ namespace FrontoBack.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "RFT.SMAYILOV@MAIL.RU",
                             NormalizedUserName = "RUFAT8899",
-                            PasswordHash = "AQAAAAEAACcQAAAAEB6ZRYQqYWPKouiJa7e1oWSEQluVJHYegkqWqqtHtaGAwQXVUXNBw8phf63sjZP9Mw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEFFwxE7X13HB/g6FqptiTRRf2J9XrCQ7/RzLoos2o+Oqx4Fz1fq7I5Mn+nYtJPz/7Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "989378a4-9c8c-45cf-b18a-23340fdf20a9",
+                            SecurityStamp = "b13e9e2f-0ade-4998-80f4-4a7f5d3091ab",
                             TwoFactorEnabled = false,
                             UserName = "Rufat8899"
                         });
@@ -605,22 +608,22 @@ namespace FrontoBack.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ac9fbf57-4e5c-431b-b5fa-f4ea68b6741e",
-                            ConcurrencyStamp = "ac9fbf57-4e5c-431b-b5fa-f4ea68b6741e",
+                            Id = "0d487bb7-9f2e-4099-a6bb-4849906a456b",
+                            ConcurrencyStamp = "0d487bb7-9f2e-4099-a6bb-4849906a456b",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "e9a4faee-dcdf-45a7-a2bd-c27c497842f2",
-                            ConcurrencyStamp = "e9a4faee-dcdf-45a7-a2bd-c27c497842f2",
+                            Id = "3d767970-0e91-4c48-80e5-4cb70a75c4d2",
+                            ConcurrencyStamp = "3d767970-0e91-4c48-80e5-4cb70a75c4d2",
                             Name = "SupperAdmin",
                             NormalizedName = "SUPPERADMIN"
                         },
                         new
                         {
-                            Id = "727ef898-e71d-4f6c-b94d-e1e27083f8be",
-                            ConcurrencyStamp = "727ef898-e71d-4f6c-b94d-e1e27083f8be",
+                            Id = "9b0dde2a-82c9-4efc-814c-17aace45ef65",
+                            ConcurrencyStamp = "9b0dde2a-82c9-4efc-814c-17aace45ef65",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -715,13 +718,13 @@ namespace FrontoBack.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "72a44d7a-559e-4104-aee6-88a4ee0864db",
-                            RoleId = "ac9fbf57-4e5c-431b-b5fa-f4ea68b6741e"
+                            UserId = "0990b467-72dd-4f47-bad5-2fd5338bbf3f",
+                            RoleId = "0d487bb7-9f2e-4099-a6bb-4849906a456b"
                         },
                         new
                         {
-                            UserId = "aa0947b4-ec35-475f-8d47-656921e00c7f",
-                            RoleId = "e9a4faee-dcdf-45a7-a2bd-c27c497842f2"
+                            UserId = "0f71cf6d-9b14-4c68-bb0e-b0fd04280c8f",
+                            RoleId = "3d767970-0e91-4c48-80e5-4cb70a75c4d2"
                         });
                 });
 

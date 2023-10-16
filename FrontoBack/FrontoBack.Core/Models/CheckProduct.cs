@@ -13,7 +13,8 @@ namespace FrontoBack.Core.Models
 		[ForeignKey(nameof(Check))]
 		public int CheckId { get; set; }
 		public Check Check { get; set; }
-		public double OldPrice { get; set; }
+		public double Price { get; set; }
+		public int ProductCount { get; set; }
 		public CheckProduct()
 		{
 		}

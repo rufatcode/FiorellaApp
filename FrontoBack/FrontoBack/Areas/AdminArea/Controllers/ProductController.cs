@@ -63,7 +63,7 @@ namespace FrontoBack.Areas.AdminArea.Controllers
             }
             
             string fileName = Guid.NewGuid().ToString() + createProductVM.Image.FileName;
-            string path = Path.Combine(_webHostEnvironment.WebRootPath, "img", fileName);
+            string path = Path.Combine(_webHostEnvironment.WebRootPath,"img", fileName);
             using (FileStream stream=new FileStream(path, FileMode.Create))
             {
                 createProductVM.Image.CopyTo(stream);

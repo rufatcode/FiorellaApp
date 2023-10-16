@@ -62,7 +62,7 @@
 
     </table>
     <div style="width:50%;text-align:center;">
-        <a asp-controller="CheckOut" asp-action="ConfirmBasket" style="color:wheat;display:inline-block;padding:5px 10px;text-decoration:none;background-color:orange;width:150px;border-radius:7px;">Confirm Basket @(Model.Sum(m=>m.Price*m.ProductCount))$</a>
+        <a asp-controller="CheckOut" asp-action="CheckOut" style="color:wheat;display:inline-block;padding:5px 10px;text-decoration:none;background-color:orange;width:150px;border-radius:7px;">Confirm Basket @(Model.Sum(m=>m.Price*m.ProductCount))$</a>
     </div>
 }
 

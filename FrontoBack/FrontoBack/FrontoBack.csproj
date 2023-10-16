@@ -39,6 +39,7 @@
     <None Remove="Views\Account\" />
     <None Remove="Areas\AdminArea\Views\Role\" />
     <None Remove="Areas\AdminArea\Views\User\" />
+    <None Remove="Views\CheckOut\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -75,6 +76,7 @@
     <Folder Include="Views\Account\" />
     <Folder Include="Areas\AdminArea\Views\Role\" />
     <Folder Include="Areas\AdminArea\Views\User\" />
+    <Folder Include="Views\CheckOut\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />

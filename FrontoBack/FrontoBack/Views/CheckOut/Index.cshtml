@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Index";
+    int checkIndex = 1;
+}
+@model List<Check>
+    <div class="row px-1">
+        @foreach (var check in Model)
+        {
+            <div class="col-md-4 grid-margin stretch-card my-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title text-danger">Check @checkIndex <a asp-action="Delete" asp-route-id="@check.Id"><i class="mdi mdi-delete btn btn-outline-danger "> </i></a></h4>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <address>
+                                    <p class="font-weight-bold text-warning">User Id: @check.AppUser.Id</p>
+                                    <p class="text-success">
+                                        Time:@check.SaleTime.ToString("d/M/yy h:mm tt")
+                                    </p>
+                                    <p class="text-danger">
+                                        Check Id:  @check.Id
+                                    </p>
+
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title text-danger">Products</h4>
+                        <div class="col-lg-12 grid-margin stretch-card">
+                            <div class="card" style="border:0;">
+                                <div class="card-body">
+
+                                    @foreach (var product in check.CheckProducts)
+                                    {
+                                        <p>
+                                            <span class="mx-3" class="text-secondary">@product.Product.Id</span>
+                                            <img width="50" height="50" style="border-radius:50%;" src="~/img/@product.Product.ImgSrc" />
+
+
+                                        </p>
+                                        <p class="text-info">Product Name: @product.Product.Name</p>
+
+                                        <p class="text-warning">Price: @product.Price$</p>
+                                        <p class="text-success">Product Count: @product.ProductCount</p>
+                                        <hr />
+                                    }
+
+                                    <p class="text-success">Total: @check.TotalAmmount$</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+                checkIndex++;
+            }
+
+    </div>
+        <a class="d-block text-center " style="text-decoration:none; color:darkcyan;" asp-controller="Product" asp-action="Index">Go To Home</a>
+

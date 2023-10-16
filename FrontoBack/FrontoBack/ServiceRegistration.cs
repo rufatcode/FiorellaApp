@@ -1,5 +1,9 @@
 ﻿using System;
+using FrontoBack.Business.Interfaces;
+using FrontoBack.Business.Services;
+using FrontoBack.Core.Interfaces;
 using FrontoBack.DAL;
+using FrontoBack.Data.Implimentations;
 using FrontoBack.Models;
 using FrontoBack.Services;
 using Microsoft.AspNetCore.Identity;
@@ -31,6 +35,8 @@ namespace FrontoBack
 			});
 			services.AddHttpContextAccessor();
 			services.AddScoped<IBasketServices, BasketServices>();
+			services.AddScoped<IStreetService, StreetService>();
+			services.AddScoped<IStreetRepozitory, StreetRepozitory>();
 			//services.AddSingleton<IAddProductService, AddProductService>();
 			//services.AddTransient<IAddProductService, AddProductService>();
 			services.AddIdentity<AppUser, IdentityRole>(option =>

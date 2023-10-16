@@ -116,7 +116,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="~/#">Elements</a>
+                                <a class="nav-link" asp-controller="CheckOut" asp-action="Index">Checks</a>
                                 <ul class="list-unstyled py-3 elements">
                                     <li class=""><a class="px-1" href="~/">Element 1</a></li>
                                     <li class=""><a class="px-1" href="~/">Element 2</a></li>
@@ -166,12 +166,21 @@
                                 {
                                     <ul class="list-unstyled py-3">
                                         <li class="">No products in the cart.</li>
+
                                     </ul>
                                 }
                                 @if (ViewBag.ProductCount > 0)
                                 {
                                     <ul class="list-unstyled py-3">
                                         <li class="">@ViewBag.ProductCount products in the cart.</li>
+                                        @foreach(var product in (List<BasketVM>)ViewBag.Products) {
+                                                <li>
+                                                    <img width="30" height="30" style="border-radius:50%;" src="~/img/@product.ImgSrc" />
+                                                    <span class="mx-1 text-primary">Name:@product.Name</span>
+                                                    <span class="text-seccess">Price: @product.Price$</span>
+                                                    <span class="mx-1 text-warning">Count:@product.ProductCount</span>
+                                                </li>
+                                            }
                                     </ul>
                                 }
                             </li>

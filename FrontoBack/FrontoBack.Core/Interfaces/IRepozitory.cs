@@ -1,13 +1,18 @@
 ﻿using System;
+using System.Linq.Expressions;
+
 namespace FrontoBack.Core.Interfaces
 {
 	public interface IRepozitory<T>
 	{
-		public Task<bool> Create(T entity);
-		public Task<bool> Delete(int id);
-		public Task<bool> Update(int id,T entity);
-		public Task<T> GetById(int id);
-		public Task<List<T>> GetAll();
-	}
+		public Task Create(T entity);
+		public Task Delete(T entity);
+		public Task Update(T entity);
+		public Task<T> GetById(Expression<Func<T, bool>> ?predicate=null, params string[] includes);
+		public Task<List<T>> GetAll(Expression<Func<T,bool>>? predicate=null,params string[] includes);
+		public Task Commit();
+		public Task<bool> EntityIsExist(Expression<Func<T, bool>> predicate);
+
+    }
 }
 
