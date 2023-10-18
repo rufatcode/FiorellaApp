@@ -54,8 +54,22 @@ namespace FrontoBack.Controllers
                 TempData["Warning"] = "Please Enter Personal Account for sales";
                 return RedirectToAction("Login", "Account");
             }
+            var productInBaskets = _basketServices.Show();
+            if (productInBaskets.Count == 0)
+            {
+                return RedirectToAction("Index", "Basket");
+            }
+            var Products = _context.Products.ToList();
+            foreach (var productInBasket in productInBaskets)
+            {
+                if (Products.Any(p => p.Id == productInBasket.Id && p.Count < productInBasket.ProductCount))
+                {
+                    TempData["AlertMessage"] = $"{productInBasket.Name} count is {Products.FirstOrDefault(p => p.Id == productInBasket.Id).Count} in stock";
+                    return RedirectToAction("Index", "Basket");
+                }
+            }
             AppUser user =await _userManager.FindByNameAsync(User.Identity.Name);
-            var domain = "http://localhost:5134/";
+            var domain = "http://localhost:5132/";
             var options = new SessionCreateOptions
             {
                 SuccessUrl = domain + $"CheckOut/ConfirmBasket",
@@ -94,53 +108,42 @@ namespace FrontoBack.Controllers
         }
         public async Task<IActionResult> ConfirmBasket()
         {
-            var productInBaskets = _basketServices.Show();
-            if (productInBaskets.Count==0)
-            {
-                return RedirectToAction("Index", "Basket");
-            }
-            var Products = _context.Products.ToList();
-            foreach (var productInBasket in productInBaskets)
-            {
-                if (Products.Any(p=>p.Id==productInBasket.Id&&p.Count<productInBasket.ProductCount))
-                {
-                    TempData["AlertMessage"] = $"{productInBasket.Name} count is {Products.FirstOrDefault(p=>p.Id==productInBasket.Id).Count} in stock";
-                    return RedirectToAction("Index", "Basket");
-                }
-            }
-            Check check = new();
-            AppUser appUser = await _userManager.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
-            check.SaleTime = DateTime.Now;
-            check.UserId = appUser.Id;
-            double totalAmmount = 0;
-            foreach (var product in productInBaskets)
-            {
-                
-                totalAmmount += product.Price*product.ProductCount;
-                Product existProduct =await _context.Products.FirstOrDefaultAsync(p => p.Id == product.Id);
-               
-                CheckProduct checkProduct = new() { CheckId = check.Id, ProductId = existProduct.Id, Price = existProduct.Price,ProductCount= product.ProductCount };
-                check.CheckProducts.Add(checkProduct);
-                existProduct.Count -= product.ProductCount;
-            }
-            check.TotalAmmount = totalAmmount;
-
-
-            
-            await _context.Checks.AddAsync(check);
-            await _context.SaveChangesAsync();
+           
             var service = new SessionService();
             Session session = service.Get(TempData["Session"].ToString());
-            if (session.PaymentStatus=="Paid")
+            if (session.PaymentStatus=="paid")
             {
+                var productInBaskets = _basketServices.Show();
+                Check check = new();
+                AppUser appUser = await _userManager.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
+                check.SaleTime = DateTime.Now;
+                check.UserId = appUser.Id;
+                double totalAmmount = 0;
+                foreach (var product in productInBaskets)
+                {
+
+                    totalAmmount += product.Price * product.ProductCount;
+                    Product existProduct = await _context.Products.FirstOrDefaultAsync(p => p.Id == product.Id);
+
+                    CheckProduct checkProduct = new() { CheckId = check.Id, ProductId = existProduct.Id, Price = existProduct.Price, ProductCount = product.ProductCount };
+                    check.CheckProducts.Add(checkProduct);
+                    existProduct.Count -= product.ProductCount;
+                }
+                check.TotalAmmount = totalAmmount;
+
+
+
+                await _context.Checks.AddAsync(check);
+                await _context.SaveChangesAsync();
                 TempData["SuccessMessage"] = $"Payment successfully complated Payent ammount:{productInBaskets.Sum(p => p.Price * p.ProductCount)}$";
+                Response.Cookies.Delete("Basket");
             }
             else
             {
                 TempData["SuccessMessage"] = "Something went wrong";
             }
             
-            Response.Cookies.Delete("Basket");
+            
             return RedirectToAction("Index", "Basket");
         }
     }

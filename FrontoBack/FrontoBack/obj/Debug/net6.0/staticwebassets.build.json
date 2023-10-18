@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1M82ITdmDfkPKgV8ar3vQw5xC6H4sT5wQPEZZxjlj3g=",
+  "Hash": "wxc5wst8kcBrU3fmASbCYtQQmnky1y9RBv8Mb+1gSro=",
   "Source": "FrontoBack",
   "BasePath": "_content/FrontoBack",
   "Mode": "Default",
@@ -4520,6 +4520,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/owlcarousel/owl.theme.default.min.css"
+    },
+    {
+      "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/Verification/VerificationEmail.html",
+      "SourceId": "FrontoBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/",
+      "BasePath": "_content/FrontoBack",
+      "RelativePath": "Verification/VerificationEmail.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Verification/VerificationEmail.html"
     }
   ]
 }

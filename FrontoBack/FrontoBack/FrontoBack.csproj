@@ -77,6 +77,7 @@
     <Folder Include="Areas\AdminArea\Views\Role\" />
     <Folder Include="Areas\AdminArea\Views\User\" />
     <Folder Include="Views\CheckOut\" />
+    <Folder Include="wwwroot\Verification\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
@@ -98,6 +99,7 @@
   <ItemGroup>
     <Content Remove="wwwroot\img\" />
     <Content Remove="wwwroot\admin\" />
+    <Content Remove="wwwroot\Verification\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FrontoBack.Data\FrontoBack.Data.csproj">

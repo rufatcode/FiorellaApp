@@ -1,22 +1,12 @@
 ﻿<Properties StartupConfiguration="{93D03148-B11C-40C6-8D8D-78DB715165B7}|Default">
+  <MultiItemStartupConfigurations />
   <AuthorInfo Name="rufat" Email="rufatri@code.edu.az" Copyright="" Company="" Trademark="" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.FrontoBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.FrontoBack PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FrontoBack/Controllers/CheckOutController.cs">
-    <Files>
-      <File FileName="FrontoBack/Controllers/CheckOutController.cs" Line="58" Column="48" />
-      <File FileName="FrontoBack.Business/ViewModel/BasketVM.cs" Line="1" Column="1" />
-      <File FileName="FrontoBack/Controllers/AccountController.cs" Line="1" Column="1" />
-      <File FileName="FrontoBack/Views/Shared/Components/Header/Default.cshtml" Line="179" Column="90" />
-      <File FileName="FrontoBack/ViewComponents/HeaderViewComponent.cs" Line="34" Column="5" />
-      <File FileName="FrontoBack/Program.cs" Line="1" Column="1" />
-      <File FileName="FrontoBack/ServiceRegistration.cs" Line="1" Column="1" />
-      <File FileName="FrontoBack/appsettings.json" Line="1" Column="1" />
-      <File FileName="FrontoBack/Views/Basket/Index.cshtml" Line="65" Column="58" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -25,24 +15,23 @@
               <Node name="Controllers" expanded="True">
                 <Node name="CheckOutController.cs" selected="True" />
               </Node>
-              <Node name="Properties" expanded="True" />
-              <Node name="Views">
-                <Node name="CheckOut" expanded="True" />
-                <Node name="Home" expanded="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="Verification" expanded="True" />
               </Node>
             </Node>
             <Node name="FrontoBack.Business" expanded="True">
               <Node name="Services" expanded="True" />
-              <Node name="ViewModel" expanded="True" />
+              <Node name="ViewModel" expanded="True">
+                <Node name="AccountVM" expanded="True" />
+              </Node>
             </Node>
-            <Node name="FrontoBack.Core">
-              <Node name="Models" expanded="True" />
+            <Node name="FrontoBack.Data" expanded="True">
+              <Node name="DAL" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

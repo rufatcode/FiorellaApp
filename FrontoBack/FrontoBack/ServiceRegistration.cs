@@ -50,8 +50,14 @@ namespace FrontoBack
 				option.Lockout.AllowedForNewUsers = true;
 				option.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
 				option.Lockout.MaxFailedAccessAttempts = 5;
+				option.SignIn.RequireConfirmedAccount = true;
 
 			}).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+			services.Configure<DataProtectionTokenProviderOptions>(option =>
+			{
+				option.TokenLifespan = TimeSpan.FromMinutes(10);
+				
+			});
 		}
 	}
 }
