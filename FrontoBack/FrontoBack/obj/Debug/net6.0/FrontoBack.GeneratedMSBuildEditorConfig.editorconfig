@@ -292,6 +292,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Views/Account/TokenIsNotValid.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Ub2tlbklzTm90VmFsaWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/Views/Account/VerifyEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9WZXJpZnlFbWFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

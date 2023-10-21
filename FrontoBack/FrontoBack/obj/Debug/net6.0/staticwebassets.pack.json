@@ -513,6 +513,10 @@
       "PackagePath": "staticwebassets/admin/vendors/mdi/fonts/materialdesignicons-webfont.woff2"
     },
     {
+      "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/css/TokenIsValid.css",
+      "PackagePath": "staticwebassets/css/TokenIsValid.css"
+    },
+    {
       "Id": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

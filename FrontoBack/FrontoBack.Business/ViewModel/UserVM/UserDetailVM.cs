@@ -9,6 +9,7 @@ namespace FrontoBack.Business.ViewModel.UserVM
 		public string Email { get; set; }
 		public bool IsActive { get; set; }
 		public IList<string> Roles { get; set; }
+		public bool IsVerified { get; set; }
 		public UserDetailVM()
 		{
 		}

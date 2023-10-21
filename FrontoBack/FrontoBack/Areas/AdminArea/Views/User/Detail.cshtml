@@ -3,7 +3,7 @@
 }
 
 @model UserDetailVM
-<div class="col-lg-6 grid-margin stretch-card">
+<div class="col-lg-8 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
             <h4 class="card-title">Users Detail Table</h4>
@@ -18,6 +18,7 @@
                             <th>FullName</th>
                             <th>Email</th>
                             <th>Status</th>
+                            <th>Account Verification</th>
                             <th>Roles</th>
                         </tr>
                     </thead>
@@ -27,6 +28,7 @@
                             <td>@Model.FullName</td>
                             <td>@Model.Email</td>
                             <td>@(Model.IsActive?"Active":"Blocked")</td>
+                            <td>@(Model.IsVerified?"Verificited":"Deactive")</td>
                             <td>
                                 <ul>
                                     @foreach (var role in Model.Roles)

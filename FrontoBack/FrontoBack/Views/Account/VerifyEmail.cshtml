@@ -36,11 +36,8 @@
                             <form class="pt-3" method="post">
                                 <div class="text-danger" asp-validation-summary="All"></div>
                                 <div class="form-group">
-                                    <input type="number" name="digits" class="form-control form-control-lg" placeholder=" 6 digits verification code">
-                                    
-                                </div>
-                                
-
+                                    <input hidden name="id" type="number" value="1" class="form-control form-control-lg" placeholder="Repeat Password">
+                                   
 
                                 <div class="text-center mt-4 font-weight-light">
                                     Go to Login? <a asp-action="Login" class="text-primary">SIGN IN </a>

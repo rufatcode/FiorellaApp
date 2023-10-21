@@ -32,6 +32,7 @@
                 <div class="row w-100 mx-0">
                     <div class="col-lg-4 mx-auto">
                         <span class="text-danger">@TempData["Warning"] </span>
+                        <span class="text-danger">@TempData["Verify"] </span>
                         <div class="auth-form-light text-left py-5 px-4 px-sm-5">
                             <div class="brand-logo">
                                 <img src="~/admin/images/logo.svg" alt="logo">
@@ -53,7 +54,7 @@
                                     <label style="display:inline-block;">Remember me...</label>
                                     <span class="text-danger" asp-validation-for="Remember"></span>
                                 </div>
-                                <a  asp-action="ForgetPassword" class="auth-link text-black">Forgot password?</a>
+                                <a asp-action="ForgetPassword" class="auth-link text-black">Forgot password?</a>
                                 <div class="mt-3">
                                     <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">SIGN IN</button>
                                 </div>

@@ -61,9 +61,7 @@ namespace FrontoBack.Controllers
            
             await _userManager.AddToRoleAsync(appUser, "User");
             var token =await _userManager.GenerateEmailConfirmationTokenAsync(appUser);
-             Random verificationDigits = new Random();
-             int digits=verificationDigits.Next(100000,1000000);
-            var link = Url.Action(nameof(VerifyEmail), "Account", new { VerifyEmail = appUser.Email,token,verfyDigit=digits }, Request.Scheme, Request.Host.ToString());
+            var link = Url.Action(nameof(VerifyEmail), "Account", new { VerifyEmail = appUser.Email,token}, Request.Scheme, Request.Host.ToString());
             MailMessage mailMessage = new();
             mailMessage.From=new MailAddress("rufatri@code.edu.az", "Fiorella App");
             mailMessage.To.Add(new MailAddress(appUser.Email));
@@ -73,7 +71,6 @@ namespace FrontoBack.Controllers
             {
                 verificationMessageBody =await fileStream.ReadToEndAsync();
             }
-            verificationMessageBody = verificationMessageBody.Replace("{{digits}}", digits.ToString());
             verificationMessageBody = verificationMessageBody.Replace("{{link}}", link);
             verificationMessageBody = verificationMessageBody.Replace("{{userName}}", appUser.FullName);
             mailMessage.Body = verificationMessageBody;
@@ -84,26 +81,35 @@ namespace FrontoBack.Controllers
             smtpClient.EnableSsl = true;
             smtpClient.Credentials = new NetworkCredential("rufatri@code.edu.az", "bazi tvxk bnta hymo");
             smtpClient.Send(mailMessage);
-            return RedirectToAction("VerifyEmail", "Account");
+            TempData["Verify"] = "Please verify your account";
+            return RedirectToAction("Login", "Account");
         }
-        public IActionResult VerifyEmail()
+        public async Task<IActionResult> VerifyEmail(string VerifyEmail, string token)
         {
+            var user = await _userManager.FindByEmailAsync(VerifyEmail);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            bool isSuccess = await _userManager.VerifyUserTokenAsync(user, _userManager.Options.Tokens.PasswordResetTokenProvider, "VerifyEmail", token);
+            if (!isSuccess)
+            {
+                return RedirectToAction("TokenIsNotValid");
+            }
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> VerifyEmail(string VerifyEmail, string token,int verfyDigit,int digits)
+        public async Task<IActionResult> VerifyEmail(string VerifyEmail, string token,int id)
         {
-            if (digits != verfyDigit)
-            {
-                ModelState.AddModelError("", "incorrect verification number");
-                return View();
-            }
             AppUser appUser =await _userManager.FindByEmailAsync(VerifyEmail);
             await _userManager.ConfirmEmailAsync(appUser, token);
+            await _userManager.UpdateSecurityStampAsync(appUser);
             return RedirectToAction("Login");
         }
-        public IActionResult ForgetPassword()
+     
+        public async Task<IActionResult> ForgetPassword()
         {
+           
             return View();
         }
         [HttpPost]
@@ -121,7 +127,7 @@ namespace FrontoBack.Controllers
                 new {email=appUser.Email,token},Request.Scheme,Request.Host.ToString()
                 );
             MailMessage mailMessage = new();
-            mailMessage.From = new MailAddress("rufatri@code.edu.az", "Fiorella App");
+            mailMessage.From = new MailAddress("rufatri@code.edu.az", "By Rufat");
             mailMessage.To.Add(new MailAddress(appUser.Email));
             mailMessage.Subject = "Reset Password";
             mailMessage.Body = $"<a href={link}>click here for reset account</a>";
@@ -134,9 +140,18 @@ namespace FrontoBack.Controllers
             smtpClient.Send(mailMessage);
             return RedirectToAction("Index","Product");
         }
-        public IActionResult ResetPassword(string token)
+        public async Task<IActionResult> ResetPassword(string email,string token)
         {
-          
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user==null)
+            {
+                return NotFound();
+            }
+            bool isSuccess = await _userManager.VerifyUserTokenAsync(user, _userManager.Options.Tokens.PasswordResetTokenProvider, "ResetPassword", token);
+            if (!isSuccess)
+            {
+                return RedirectToAction("TokenIsNotValid");
+            }
             return View();
         }
         [HttpPost]
@@ -158,6 +173,10 @@ namespace FrontoBack.Controllers
             }
             await _userManager.UpdateSecurityStampAsync(appUser);
             return RedirectToAction("Login");
+        }
+        public IActionResult TokenIsNotValid()
+        {
+            return View();
         }
         public async Task<IActionResult> Login()
         {

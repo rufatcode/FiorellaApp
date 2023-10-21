@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wxc5wst8kcBrU3fmASbCYtQQmnky1y9RBv8Mb+1gSro=",
+  "Hash": "IvkgQaJvQAkcV4hOOoiFvrNP4VTxTRj3zfBKBvo91Aw=",
   "Source": "FrontoBack",
   "BasePath": "_content/FrontoBack",
   "Mode": "Default",
@@ -2242,6 +2242,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/style.css.map"
+    },
+    {
+      "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/css/TokenIsValid.css",
+      "SourceId": "FrontoBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/",
+      "BasePath": "_content/FrontoBack",
+      "RelativePath": "css/TokenIsValid.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/TokenIsValid.css"
     },
     {
       "Identity": "/Volumes/Mac/AspNet/FrontToBack/FrontoBack/FrontoBack/wwwroot/favicon.ico",

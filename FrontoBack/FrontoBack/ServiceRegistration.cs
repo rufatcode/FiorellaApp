@@ -48,7 +48,6 @@ namespace FrontoBack
 				option.Password.RequireNonAlphanumeric = true;
 				option.User.RequireUniqueEmail = true;
 				option.Lockout.AllowedForNewUsers = true;
-				option.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
 				option.Lockout.MaxFailedAccessAttempts = 5;
 				option.SignIn.RequireConfirmedAccount = true;
 

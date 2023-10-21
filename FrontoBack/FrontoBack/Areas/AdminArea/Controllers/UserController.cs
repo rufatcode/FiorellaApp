@@ -48,7 +48,12 @@ namespace FrontoBack.Areas.AdminArea.Controllers
                 return NotFound();
             }
             IList<string> Roles = await _userManager.GetRolesAsync(user);
-            return View(new UserDetailVM { Email=user.Email,UserName=user.UserName,Id=user.Id,Roles=Roles,FullName=user.FullName,IsActive=user.IsActive});
+            bool isVerified=false;
+            if (await _userManager.IsEmailConfirmedAsync(user))
+            {
+                isVerified = true;
+            }
+            return View(new UserDetailVM { Email=user.Email,UserName=user.UserName,Id=user.Id,Roles=Roles,FullName=user.FullName,IsActive=user.IsActive,IsVerified=isVerified});
         }
         [Authorize(Roles = "SupperAdmin")]
         public async Task<IActionResult> Delete(string  id)
