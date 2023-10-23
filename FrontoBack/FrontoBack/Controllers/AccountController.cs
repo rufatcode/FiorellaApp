@@ -147,7 +147,7 @@ namespace FrontoBack.Controllers
             {
                 return NotFound();
             }
-            bool isSuccess = await _userManager.VerifyUserTokenAsync(user, _userManager.Options.Tokens.PasswordResetTokenProvider, "ResetPassword", token);
+            bool isSuccess = await _userManager.VerifyUserTokenAsync(user, _userManager.Options.Tokens.EmailConfirmationTokenProvider, "ResetPassword", token);
             if (!isSuccess)
             {
                 return RedirectToAction("TokenIsNotValid");
